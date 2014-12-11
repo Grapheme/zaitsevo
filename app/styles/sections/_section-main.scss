@@ -1,0 +1,17 @@
+.section-main {
+	position: relative;
+	background: url(../images/texture.jpg);
+
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 0;
+
+		width: 100%;
+		margin: -74px 0 0 0;
+
+		text-align: center;
+
+		font: 46px / 37px 'room', sans-serif;
+	}
+}
