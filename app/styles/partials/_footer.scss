@@ -7,6 +7,8 @@
 
 	padding: 0 65px;
 
+	font: 15px 'osnova_pro', sans-serif;
+
 	background: url(../images/footer.png) 0 bottom / 100% 100%;
 
 	.footer-cont {
@@ -22,7 +24,7 @@
 
 	.copy {
 		float: left;
-		line-height: 80px;
+		line-height: 76px;
 	}
 
 	.social {
@@ -35,6 +37,6 @@
 
 	.dev {
 		float: right;
-		line-height: 80px;
+		line-height: 76px;
 	}
 }

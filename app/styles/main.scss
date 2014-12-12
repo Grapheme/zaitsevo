@@ -102,11 +102,17 @@ textarea {
 @import 'static/vars';
 @import 'static/colors';
 
+@import 'partials/btns';
 @import 'partials/header';
 @import 'app';
 @import 'partials/footer';
 
 @import 'sections/section-main';
+@import 'sections/section-about';
+@import 'sections/section-map';
+@import 'sections/section-getto';
+@import 'sections/section-objects';
+@import 'sections/section-areas';
 
 /* ==========================================================================
    Helper classes

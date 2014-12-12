@@ -1,0 +1,47 @@
+.section-objects {
+	position: relative;
+	padding: 241px 0 241px;
+	background: url(../images/texture.jpg);
+
+	.section-cont {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+
+	.objects-list {
+		@extend .list-unstyled;
+	}
+
+	.objects-item {
+		display: inline-block;
+		vertical-align: top;
+		width: 23%;
+		height: 267px;
+
+		background: #fff;
+
+		margin: 0 2.666666% 2.666666% 0;
+
+		&:nth-child(4n+4) {
+			margin: 0;
+		}
+	}
+
+	.objects-item-head {
+		display: table;
+		height: 100%;
+		padding: 0 42px 0 114px;
+
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+
+			font-family: 'room', sans-serif;
+			font-weight: 600;
+			font-size: 22px;
+			text-transform: uppercase;
+
+			margin: 0;
+		}
+	}
+}
