@@ -52,6 +52,9 @@ nav {
 		line-height: 47px;
 
 		a {
+			transition: all .4s ease;
+
+			position: relative;
 			margin: 0 0 0 27px;
 
 			font-family: 'room', sans-serif;
@@ -60,6 +63,25 @@ nav {
 
 			color: $clr-dark-green;
 			text-decoration: none;
+
+			&:after {
+				transition: all .4s ease;
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+
+				width: 0;
+				border-bottom: 1px solid $clr-light-brown;
+			}
+
+			&:hover {
+				
+				&:after {
+					width: 100%;
+					left: 0;
+				}
+			}
 		}
 	}
 }

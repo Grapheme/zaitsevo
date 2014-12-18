@@ -9,6 +9,8 @@
 
 		<!-- build:css styles/vendor.css -->
 		<!-- bower:css -->
+		<link rel="stylesheet" href="../bower_components/fancybox/source/jquery.fancybox.css" />
+		<link rel="stylesheet" href="../bower_components/tooltipster/css/tooltipster.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 
@@ -69,12 +71,20 @@
 					<span class="color-green">Зайцево</span> - это образ жизни,<br>
 					о котором вы мечтали
 				</h1>
+				
+				<div class="btn-scroll-cont">
+					<div class="btn btn--small btn--scroll btn--decorated">
+						<div class="btn--scroll-dec"></div>
+						О поселке
+					</div>
+				</div>				
 
 				<div class="clouds">
 					<div class="cloud cloud--small cloud-1"></div>
 					<div class="cloud cloud--small cloud-2"></div>
 					<div class="cloud cloud--big cloud-3"></div>
 				</div>
+
 			</section>
 		<!-- End of main section -->
 
@@ -141,7 +151,7 @@
 								</h3>
 							</div>
 							<div class="adv-item-body">
-							<p>
+								<p>
 									Жизнь в нашем поселке
 									не является роскошью,
 									средний отстроенный
@@ -163,7 +173,7 @@
 								</p>
 							</div>
 							<div class="adv-item-links">
-								<a href="#">Скачать генплан</a>
+								<span class="icon icon-jpg"></span> <a href="#">Скачать генплан</a>
 							</div>
 						</li><!--
 
@@ -182,17 +192,59 @@
 								</p>
 							</div>
 							<div class="adv-item-links">
-								<a href="#">Посмотреть сертификат</a>
+								<span class="icon icon-pdf"></span> <a href="#">Посмотреть сертификат</a>
 							</div>
 						</li>
 					</ul>
+
+					<div class="btn-scroll-cont">
+						<div class="btn btn--small btn--scroll btn--decorated">
+							<div class="btn--scroll-dec"></div>
+							Участки
+						</div>
+					</div>
 				</div>				
 			</section>
 		<!-- End of about section -->
 
 		<!-- Map section -->
 			<section class="section section-map">
+
 				<img src="images/map.jpg" alt="">
+
+				<div class="map-marks">
+					<div id="stadium-tip" class="map-mark stadium">
+						
+					</div>
+					<div id="theater-tip" class="map-mark theater">
+						
+					</div>
+					<div id="barbecue-tip" class="map-mark barbecue">
+						
+					</div>
+					<div id="golf-tip" class="map-mark golf">
+						
+					</div>
+					<div id="farm-tip" class="map-mark farm">
+						
+					</div>
+					<div id="kindergarden-tip" class="map-mark kindergarden">
+						
+					</div>
+					<div id="fishing-tip" class="map-mark fishing">
+						
+					</div>
+					<div id="cafe-tip" class="map-mark cafe">
+						
+					</div>
+				</div>
+
+				<div class="btn-scroll-cont">
+					<div class="btn btn--small btn--scroll btn--decorated">
+						<div class="btn--scroll-dec"></div>
+						Инфраструктура
+					</div>
+				</div>
 			</section>
 		<!-- End of map section -->
 
@@ -209,59 +261,350 @@
 			<section class="section section-objects">
 
 				<div class="section-cont">
-					<ul class="objects-list">
+					<div class="objects-list">
 						
-						<li class="objects-item">
+						<div class="objects-item" id="obj-stadium">							
 							<div class="objects-item-head">
+								<div class="icon icon-stadium"></div>
 								<h3>Стадион</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
-							<div class="objects-item-head">
+					 --><div class="objects-item" id="obj-teatr">
+					 		<div class="objects-item-head">
+					 			<div class="icon icon-teatr"></div>
 								<h3>Мини театр</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
+					 --><div class="objects-item" id="obj-barbecue">
 							<div class="objects-item-head">
+								<div class="icon icon-barbecue"></div>
 								<h3>Зоны барбекю</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
+					 --><div class="objects-item" id="obj-golf">					 		
 							<div class="objects-item-head">
+								<div class="icon icon-golf"></div>
 								<h3>Гольф клуб</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
+					 --><div class="objects-item last" id="obj-cowcow">					 		
 							<div class="objects-item-head">
+								<div class="icon icon-cowcow"></div>
 								<h3>Частная ферма</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
+					 --><div class="objects-item last" id="obj-nipple">					 		
 							<div class="objects-item-head">
-								<h3>Зоны барбекю</h3>
+								<div class="icon icon-nipple"></div>
+								<h3>Детский сад</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
+					 --><div class="objects-item last" id="obj-fish">
 							<div class="objects-item-head">
-								<h3>Гольф клуб</h3>
+								<div class="icon icon-fish"></div>
+								<h3>Рыбная ловля</h3>
 							</div>
-						</li><!--
+						</div><!--
 
-					 --><li class="objects-item">
+					 --><div class="objects-item last" id="obj-cupbook">
 							<div class="objects-item-head">
-								<h3>Частная ферма</h3>
+								<div class="icon icon-cupbook"></div>
+								<h3>Кафе</h3>
 							</div>
-						</li>
-					</ul>
+						</div>
+
+						<div class="obj-tabs hidden">
+							<div>
+								<div class="obj-tab-item hidden" data-to="obj-stadium">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Стадион</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-teatr">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Мини театр</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-barbecue">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Зоны барбекю</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-golf">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Гольф клуб</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-cowcow">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Частная ферма</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-nipple">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Детский сад</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-fish">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Рыбная ловля</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+								<div class="obj-tab-item hidden" data-to="obj-cupbook">
+									<div class="obj-tab-head twig--brown">
+										<div class="obj-tab-icon icon icon-cowcow"></div>
+										<h3>Кафе</h3>
+										<div class="js-tabs-close">
+											<span class="obj-cross-icon icon icon-cross"></span>
+										</div>
+									</div>
+									<div class="obj-tab-body">
+										<p>										
+											Ферма — частное сельскохозяйственное предприятие, занимающееся производством сельскохозяйственной продукции.
+										</p>
+										<p>
+											В России, в результате распространения колхозов начиная с 1930-х гг.
+											фермерская деятельность ограничивалась размерами малого
+											семейного предприятия, в котором исключалось применение
+											наёмного труда (крестьяне-единоличники). Единоличники
+											облагались более высоким, по сравнению с колхозниками,
+											подоходным налогом и обязаны были осуществлять обязательные
+											поставки своей продукции государству.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="obj-tabs-nav">
+								<span class="icon icon-arrow_left js-nav-left"></span>
+								<span class="icon icon-arrow_right js-nav-right"></span>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</section>	
 		<!-- End of objects section -->
+
+		<!-- House project section -->
+			<section class="section section-houses-proj">
+
+				<div class="section-cont">
+					
+					<div class="house-plan">
+						<h2 class="twig--green">
+							Каркасный одноэтажный дом<br>
+							108 м<sup>2</sup> (9*12 м)
+						</h2>
+
+						<div class="house-pict">
+							<img src="images/plans/01.jpg" alt="">
+						</div><!--
+
+					 --><div class="house-plan-top">
+							<img src="images/plans/01-plan.jpg" alt="">
+						</div>
+
+						<ul class="house-props">
+
+							<li class="house-props-item">
+								600 тыс. рублей за базовую комплектация
+							</li><!--
+
+						 --><li class="house-props-item">
+								Облицовочные работы включены в стоимость базовой комплектации
+							</li><!--
+
+						 --><li class="house-props-item">
+								Строительно-монтажные работы материалы и доставка
+								на объект включены в стоимость.
+							</li><!--
+
+						 --><li class="house-props-item">
+								Строительно-монтажные работы материалы и доставка
+							</li>
+						</ul>						
+					</div>					
+				</div>
+				<ul class="houses-list">
+							
+					<li class="houses-item">
+						<div class="houses-item-cover" style="background-image: url(images/houses/01.jpg)">
+							
+						</div>
+						<div class="houses-item-desc">
+							<span>
+								Каркасный одноэтажный дом 98м<sup>2</sup>
+							</span>
+						</div>
+					</li><!--
+
+				 --><li class="houses-item">
+						<div class="houses-item-cover" style="background-image: url(images/houses/01.jpg)">
+							
+						</div>
+						<div class="houses-item-desc">
+							<span>
+								Каркасный одноэтажный дом 98м<sup>2</sup>
+							</span>
+						</div>
+					</li><!--
+
+				 --><li class="houses-item">
+						<div class="houses-item-cover" style="background-image: url(images/houses/01.jpg)">
+							
+						</div>
+						<div class="houses-item-desc">
+							<span>
+								Каркасный одноэтажный дом 98м<sup>2</sup>
+							</span>
+						</div>
+					</li><!--
+
+				 --><li class="houses-item">
+						<div class="houses-item-cover" style="background-image: url(images/houses/01.jpg)">
+							
+						</div>
+						<div class="houses-item-desc">
+							<span>
+								Каркасный одноэтажный дом 98м<sup>2</sup>
+							</span>
+						</div>
+					</li>
+				</ul>
+			</section>
+		<!-- End of house project section -->
 
 		<!-- Areas section -->
 			<section class="section section-areas">
@@ -287,15 +630,21 @@
 							<ul class="section-area-imgs">
 
 								<li class="section-area-img">
-									<img src="images/areas/01.jpg">
+									<a href="images/areas/01.jpg" class="fancybox" rel="gallery">
+										<img src="images/areas/01.jpg">
+									</a>
 								</li>
 
 								<li class="section-area-img">
-									<img src="images/areas/02.jpg">
+									<a href="images/areas/02.jpg" class="fancybox" rel="gallery">
+										<img src="images/areas/02.jpg">
+									</a>
 								</li>
 
 								<li class="section-area-img">
-									<img src="images/areas/03.jpg">
+									<a href="images/areas/03.jpg" class="fancybox" rel="gallery">
+										<img src="images/areas/03.jpg">
+									</a>
 								</li>
 							</ul>
 
@@ -373,6 +722,84 @@
 				</div>
 			</section>
 		<!-- End of areas section -->
+
+		<!-- Getto section -->
+			<section class="section section-no-troubles">
+				<h2>
+					Идеальное место для беззаботной жизни вашей семьи!
+				</h2>
+				<a href="#" class="btn btn--blue btn--decorated">Заказать звонок</a>
+			</section>
+		<!-- End of getto section -->
+
+		<!-- Footer form section -->
+			<section class="section section-footer-form">
+
+				<div class="section-cont">
+					
+					<div class="section-form-half callback">
+						
+						<div class="section-form-head twig--green">
+							
+							<h2>
+								Перезвоните мне
+							</h2>
+						</div>
+
+						<div class="section-form-body">
+
+							<p>
+								Если у вас возникли вопросы или вы хотите узнать дополнительную
+								информацию об участках, может быть вы хотите купить участок для
+								организации? Закажите звонок, мы свяжемся в течение 5 минут!
+							</p>
+
+							<button class="btn btn--big-green">
+								Обратный звонок
+							</button>
+						</div>
+
+					</div><!--
+
+				 --><div class="section-form-half feedback">
+
+						<div class="section-form-head twig--brown">
+							
+							<h2>
+								Написать письмо
+							</h2>
+						</div>
+
+						<div class="section-form-body">
+							
+							<form id="feedback-form" class="feedback-form" action="" method="post" novalidate="novalidate">
+								
+								<fieldset>
+									
+									<textarea></textarea>
+								</fieldset>
+								<fieldset>
+
+									<div class="col col-half">
+										<label>Ваш email</label>
+										<input type="text">
+									</div><!--
+									
+								 --><div class="col col-half">
+										<label>Телефон</label>
+										<input type="text">
+									</div>								
+								</fieldset>
+								<button class="btn btn--big-green">
+									Отправить письмо
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>				
+			</section>
+		<!-- End of footer form section-->
+
 		</div>
 
 		<footer class="main-footer">
@@ -412,6 +839,9 @@
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
 		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../bower_components/fancybox/source/jquery.fancybox.js"></script>
+		<script src="../bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+		<script src="../bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 

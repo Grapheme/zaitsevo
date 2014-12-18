@@ -72,3 +72,83 @@ $fontPath: '../fonts/';
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src:url( $fontPath + 'icomoon.eot?-3imyb5');
+    src:url( $fontPath + 'icomoon.eot?#iefix-3imyb5') format('embedded-opentype'),
+        url( $fontPath + 'icomoon.woff?-3imyb5') format('woff'),
+        url( $fontPath + 'icomoon.ttf?-3imyb5') format('truetype'),
+        url( $fontPath + 'icomoon.svg?-3imyb5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_down:before {
+    content: "\e600";
+}
+.icon-arrow_left:before {
+    content: "\e601";
+}
+.icon-arrow_right:before {
+    content: "\e602";
+}
+.icon-barbecue:before {
+    content: "\e603";
+}
+.icon-cowcow:before {
+    content: "\e604";
+}
+.icon-cupbook:before {
+    content: "\e605";
+}
+.icon-facebook1:before {
+    content: "\e606";
+}
+.icon-fish:before {
+    content: "\e607";
+}
+.icon-golf:before {
+    content: "\e608";
+}
+.icon-instagram:before {
+    content: "\e609";
+}
+.icon-jpg:before {
+    content: "\e60a";
+}
+.icon-cross:before {
+    content: "\e60b";
+}
+.icon-logo:before {
+    content: "\e60c";
+}
+.icon-mouse2:before {
+    content: "\e60d";
+}
+.icon-nipple:before {
+    content: "\e60e";
+}
+.icon-pdf:before {
+    content: "\e60f";
+}
+.icon-stadium:before {
+    content: "\e610";
+}
+.icon-teatr:before {
+    content: "\e611";
+}

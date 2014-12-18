@@ -1,6 +1,6 @@
 .section-objects {
 	position: relative;
-	padding: 241px 0 241px;
+	padding: 241px 0 200px;
 	background: url(../images/texture.jpg);
 
 	.section-cont {
@@ -9,21 +9,39 @@
 	}
 
 	.objects-list {
+		position: relative;
 		@extend .list-unstyled;
 	}
 
 	.objects-item {
+		position: relative;
 		display: inline-block;
 		vertical-align: top;
 		width: 23%;
 		height: 267px;
 
+		margin: 0 2.666666% 2.666666% 0;
+
 		background: #fff;
 
-		margin: 0 2.666666% 2.666666% 0;
+		cursor: pointer;
+
+		&.last {
+			margin-bottom: 0;
+		}
 
 		&:nth-child(4n+4) {
 			margin: 0;
+		}
+
+		.icon {
+			position: absolute;
+			top: 50%;
+			right: 62%;
+			margin: -0.5em 0 0;
+
+			font-size: 2.5em;
+			color: #348540;
 		}
 	}
 
@@ -31,6 +49,85 @@
 		display: table;
 		height: 100%;
 		padding: 0 42px 0 114px;
+
+		&.stadium {
+			background-image: url(../images/icons/stadium.svg);
+			background-repeat: no-repeat;
+			background-position: 47px 65%;
+		}
+		&.theater {
+			background-image: url(../images/icons/teatr.svg);
+			background-repeat: no-repeat;
+			background-position: 47px 63%;
+		}
+		&.barbecue {
+			background-image: url(../images/icons/barbecue.svg);
+			background-repeat: no-repeat;
+			background-position: 47px 58%;
+		}
+		&.golf {
+			background-image: url(../images/icons/golf.svg);
+			background-repeat: no-repeat;
+			background-position: 47px 60%;
+		}
+		&.farm {
+			background-image: url(../images/icons/cowcow.svg);
+			background-repeat: no-repeat;
+			background-position: 47px 64%;				
+		}
+
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+
+			font-family: 'room', sans-serif;
+			font-weight: 600;
+			font-size: 22px;
+			text-transform: uppercase;
+
+			margin: 0;			
+		}
+	}
+
+	.obj-tabs {
+		position: absolute;
+		top: 0;
+		left: 25.6667%;
+
+		width: 48.6667%;
+		height: 100%;
+		padding: 0 39px;
+
+		background: #fff;
+
+		.obj-tabs-nav {
+			position: absolute;
+			bottom: 52px;
+			right: 39px;
+
+			.icon {
+				cursor: pointer;
+				font-size: 2em;
+				color: #959b97;
+
+				&:hover {
+					color: $clr-green;
+				}
+			}
+		}
+	}
+
+	.obj-tab-item {
+		height: 100%;
+	}
+
+	.obj-tab-head {
+		position: relative;
+		display: table;
+		width: 100%;
+		height: 166px;
+		margin: 0 0 36px;
+		padding: 0 0 0 71px;
 
 		h3 {
 			display: table-cell;
@@ -42,6 +139,34 @@
 			text-transform: uppercase;
 
 			margin: 0;
+		}
+
+		.obj-tab-icon {
+			position: absolute;
+			top: 50%;
+			left: 6px;
+			margin: -0.5em 0 0;
+
+			font-size: 2.5em;
+			color: #348540;
+		}
+
+		.obj-cross-icon {
+			position: absolute;
+			top: 71px;
+			right: 0;
+
+			font-size: 2em;
+
+			cursor: pointer;
+		}
+	}
+
+	.obj-tab-body {
+		p {
+			margin-top: 0;
+			font-size: 15px;
+			line-height: 24px;
 		}
 	}
 }

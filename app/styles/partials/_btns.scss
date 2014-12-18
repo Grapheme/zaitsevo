@@ -1,4 +1,5 @@
 .btn {
+	transition: all .4s ease;
 	display: inline-block;
 
 	height: 58px;
@@ -20,6 +21,26 @@
 	text-decoration: none;
 	text-transform: uppercase;
 
+	cursor: pointer;
+
+	&.btn--big-green {
+		width: 100%;
+		height: 95px;
+
+		border-radius: 0;
+
+		line-height: 95px;
+		font-size: 27px;
+
+		background: $clr-green;
+		color: #fff;
+
+		&:hover {
+			color: #fafafa;
+			color: rgba(255, 255, 255, .64);
+		}
+	}
+
 	&.btn--small {
 		height: 48px;
 		padding: 0 23px;
@@ -40,20 +61,34 @@
 
 	&.btn--blue {
 		color: $clr-blue;
+
+		&:hover {
+			color: lighten($clr-blue, 20%);
+		}
 	}
 
 	&.btn--black {
 		color: $clr-black-green;
+
+		&:hover {
+			color: lighten($clr-black-green, 20%);
+		}
 	}
 
 	&.btn--green {
 		color: $clr-green;
+
+		&:hover {
+			color: lighten($clr-green, 20%);
+		}
 	}
 
 	&.btn--decorated {
 		position: relative;
+		overflow: hidden;
 
 		&:before {
+			transition: all .6s ease;
 			content: "•";
 			position: absolute;
 			top: 0;
@@ -62,12 +97,62 @@
 			color: $clr-light-brown
 		}
 		&:after {
+			transition: all .6s ease;
 			content: "•";
 			position: absolute;
 			top: 0;
 			right: 23px;
 
 			color: $clr-light-brown;
+		}
+
+		&:hover {
+
+			&:before {
+				transform: translateX(-76px);
+			}
+			&:after {
+				transform: translateX(76px);
+			}
+		}
+	}
+	&.btn--scroll {
+		overflow: visible;
+		padding: 0 47px;
+
+		background: #f9fcfc;
+
+		font-family: 'room', sans-serif;
+
+		&.btn--decorated {
+			&:before {
+				left: 23px;
+			}
+			&:after {
+				right: 23px;				
+			}
+		}
+
+		&:hover {
+
+			&:before {
+				transform: translateX(0);
+			}
+			&:after {
+				transform: translateX(0);
+			}
+		}
+
+		.btn--scroll-dec {
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+
+			width: 79px;
+			height: 47px;
+			margin: 0 0 0 -40px;
+
+			background: url(../images/mouse.png);
 		}
 	}
 }

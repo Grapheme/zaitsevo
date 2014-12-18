@@ -1,5 +1,85 @@
 .section-map {
+	position: relative;
+	min-height: 0;
+
 	& > img {
 		width: 100%;
+	}
+
+	.btn-scroll-cont {
+		position: absolute;
+		bottom: 52px;
+		left: 0;
+		width: 100%;
+
+		text-align: center;
+	}
+
+	.map-mark {
+		transition: all .4s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 38px;
+		height: 38px;
+
+		background: #fff;
+		background: rgba(255, 255, 255, .3);
+		border-radius: 50%;
+
+		cursor: pointer;
+
+		&:hover {
+			background: #ddd;
+			background: rgba(255, 255, 255, .8);
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			width: 14px;
+			height: 14px;
+			margin: -7px 0 0 -7px;
+
+			background: $clr-green;
+
+			border-radius: 50%;
+		}
+
+		&.stadium {
+			top: 33.4%;
+			left: 41.6%;    
+		}
+		&.theater {
+			left: 33%;
+    		top: 49.8%;
+		}
+		&.barbecue {
+			left: 50.4%;
+    		top: 37.05%;
+		}
+		&.golf {
+			left: 51.85%;
+    		top: 47.8%;
+		}
+		&.farm {
+			left: 60.9%;
+    		top: 50.3%;
+		}
+		&.kindergarden {
+			left: 54.6%;
+    		top: 19.4%;
+		}
+		&.fishing {
+			left: 63%;
+    		top: 23%;
+		}
+		&.cafe {
+			left: 58.8%;
+    		top: 19.4%;
+		}
 	}
 }
