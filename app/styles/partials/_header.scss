@@ -7,14 +7,16 @@
 	width: 100%;
 	height: 155rem / $hfs;
 
-	padding: 38rem / $hfs 65rem / $hfs 0;
+	padding: 38rem / $hfs 65rem / $hfs 38rem / $hfs;
+
+	background: url(../images/texture.jpg);
 
 	.logo {
 		width: 178rem / $hfs;
 		height: 116rem / $hfs;
 
 		position: absolute;
-		top: 38rem / $hfs;
+		top: 1.175rem;
 		left: 50%;
 		margin: 0 0 0 -89rem / $hfs;
 
@@ -58,7 +60,7 @@ nav {
 			margin: 0 0 0 27rem / $hfs;
 
 			font-family: 'room', sans-serif;
-			font-size: 15em / $hfs;
+			font-size: 18em / $hfs;
 			line-height: (37 / 15) + em;
 
 			color: $clr-dark-green;

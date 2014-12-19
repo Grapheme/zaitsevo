@@ -22,7 +22,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-stadium"></div><h3>Стадион</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>Стадион оборудован футбольной, баскетбольной, беговой, волейбольной, теннисной площадками с количеством мест на 2000 человек. </p> \
 						</div>')
 		});
 		$('#theater-tip').tooltipster({
@@ -31,7 +31,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-teatr"></div><h3>Мини театр</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>Зал вмещает 500 зрителей. Полностью технически оснащен для постановки представлений и изготовления костюмов и декораций. Порадуйте своим творчеством близких и друзей.</p> \
 						</div>')
 		});
 		$('#barbecue-tip').tooltipster({
@@ -40,7 +40,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-barbecue"></div><h3>Зоны барбекю</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>Общая зона барбекю для сбора веселой компании и приготовления мяса и частной фермы и закусок. </p> \
 						</div>')
 		});
 		$('#golf-tip').tooltipster({
@@ -49,7 +49,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-golf"></div><h3>Гольф клуб</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>Оборудованный по последним тенденциям лучших гольф-клубов для изысканного отдыха серьезных мужчин. </p> \
 						</div>')
 		});
 		$('#farm-tip').tooltipster({
@@ -58,7 +58,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-cowcow"></div><h3>Частная ферма</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>В  животноводческой ферме в экологически чистых условиях заботливо выращиваются сельскохозяйственные животные. При ферме есть эко-магазин, в котором каждый день можно приобрести свежайшие продукты. </p> \
 						</div>')
 		});
 		$('#kindergarden-tip').tooltipster({
@@ -67,7 +67,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-nipple"></div><h3>Детский сад</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>Детский сад «Зеленая школа» гордится опытными педагогами, игровой образовательной атмосферой и воспитанием в ваших малышах любви и заботы к окружающему миру. </p> \
 						</div>')
 		});
 		$('#fishing-tip').tooltipster({
@@ -76,7 +76,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-fish"></div><h3>Рыбная ловля</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>Рыболовное хозяйство предоставляет возможность коммерческой рыбалки. Но можно рыбачить и просто для удовольствия. Оборудованы, чтобы вы не отвлекались на мелочи. </p> \
 						</div>')
 		});
 		$('#cafe-tip').tooltipster({
@@ -85,7 +85,7 @@ var App = (function(){
 			maxWidth: 262,
 			content: $('<div class="tooltip-head"><div class="icon icon-cupbook"></div><h3>Кафе</h3></div> \
 						<div class="tooltip-body"> \
-							<p>Оборудован площадками для занятий футболом,  баскетболом, воллейболом, бегом с количеством мест на 2 000 человек. </p> \
+							<p>В уютном кафе за любимой книгой из небольшой библиотеки можно насладиться ароматным кофе и чаем и попробовать вкуснейшую домашнюю выпечку. </p> \
 						</div>')
 		});
 	});
@@ -157,111 +157,12 @@ var App = (function(){
 
 	$('.objects-list').objectTabs();
 
-	//Page transitions plugin
-	jQuery.fn.pageTransitions = function() {
-		var $elem = $(this);
-		var $sections = $elem.find('.section');
-		var mousewheelCount = 0;
-		var direction = 'down';
-		var cooldown = true;
-
-		// using the event helper
-		$elem.mousewheel(function(event) {
-			//Return if we already triggered the event
-			if( cooldown == false ) return;
-
-			console.log(event.deltaX, event.deltaY, event.deltaFactor);
-
-			//If mousewheel down - go next section
-			if( event.deltaY < 0 ) {
-
-				if(event.deltaY == -1) {
-					mousewheelCount += 5;
-				} else {
-					++mousewheelCount;
-				} 
-			}
-			//If mousewheel up - go prev section
-			if( event.deltaY > 0 ) {
-
-				if(event.deltaY == 1) {
-					mousewheelCount -= 5;
-				} else {
-					--mousewheelCount;
-				}  
-			}
-
-			//Now check mouseWheelCount and trigger page changes
-			if(mousewheelCount >= 25) {
-				//Trigger next-section event
-				console.log('mousewheel go next');
-				$elem.trigger('next-section');
-
-				//Clear mousewheel count
-				mousewheelCount = 0;
-			}
-			if(mousewheelCount <= -25) {
-				//Trigger prev-section event
-				console.log('mousewheel go prev');
-				$elem.trigger('prev-section');
-
-				//Clear mousewheel count
-				mousewheelCount = 0;
-			}
-
-		});
-
-		$elem.bind('init', function(){
-			$sections.addClass('hidden').removeClass('active');
-			$sections.filter(':first-child').removeClass('hidden').addClass('active');
-		});
-
-		$elem.bind('show-section', function(e, index) {
-			//Show section triggered!
-			console.log('next-index is', index);
-
-			$sections.addClass('hidden').removeClass('active');
-			$sections.eq(index).removeClass('hidden').addClass('active');
-		});
-
-		$elem.bind('next-section', function() {
-			console.log('next-section triggered!');
-			var $current = $sections.filter('.active').index();
-
-			//If next elem exists
-			if( !$sections.eq( $current ).is(':last-child') ) {
-				$elem.trigger('show-section',[ $current + 1 ]);
-				console.log('go-go-next!')
-			}
-
-			cooldown = false;
-			setTimeout( function(){
-				cooldown = true;
-				console.log('cooldown cleaned');
-			}, 3000);
-		});
-
-		$elem.bind('prev-section', function() {
-			console.log('prev-section triggered!');
-			var $current = $sections.filter('.active').index();
-
-			//If prev elem exists
-			if( !$sections.eq( $current ).is(':first-child') ) {
-				$elem.trigger('show-section',[ $current - 1 ]);
-				console.log('go-go-prev!')
-			}
-
-			cooldown = false;
-			setTimeout( function(){
-				cooldown = true;
-			}, 1000);
-		});
-
-		//Init plugin
-		$elem.trigger('init');
-	};
-
-	$('.main-wrapper').pageTransitions();
+	var s = skrollr.init({
+		constants: {
+			map: parseInt( $('.section-map').offset().top ) - $('.section-map').height(),
+			mapEnd: parseInt( $('.section-map').offset().top )
+		}
+	});
 
 })();
 

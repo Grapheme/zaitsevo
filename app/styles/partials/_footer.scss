@@ -2,28 +2,44 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
+
 	width: 100%;
-	height: 210rem / $hfs;
+	height: 120rem / $hfs;
 
 	padding: 0 65rem / $hfs;
 
 	font: 15em / $hfs 'osnova_pro', sans-serif;
 
-	background: url(../images/footer.png) repeat-x 0 bottom;
+	background: url(../images/footer.png) repeat-x 0 top;
+
+	.footer-houses {
+		position: absolute;
+		top: -16rem / $hfs;
+		left: 50%;
+
+		max-width: 1140rem / $hfs;
+		width: 100%;
+		height: 100%;
+		margin-left: -25%;
+
+		background: url(../images/footers/main-footer.png);
+		background-size: 97% auto;
+	}
 
 	.footer-cont {
 		position: absolute;
-		left: 65rem / $hfs;
-		right: 65rem / $hfs;
-		bottom: 26rem / $hfs;
+		left: .5rem;
+		right: .5rem;
+		bottom: 21rem / $hfs;
 
-		height: 80rem / $hfs;	
+		height: 60rem / $hfs;	
 
 		background: url(../images/footer-texture.png);
 	}
 
 	.copy {
 		float: left;
+		margin-left: 65rem / $hfs;
 		line-height: 76rem / $hfs;
 	}
 
@@ -53,6 +69,7 @@
 
 	.dev {
 		float: right;
+		margin-right: 65rem / $hfs;
 		line-height: 76rem / $hfs;
 	}
 }

@@ -10,16 +10,12 @@
 	}
 }
 html {
-	font: 100% 'osnova_pro', sans-serif;
+	font: 14px 'osnova_pro', sans-serif;
 }
 
 html, body {
 	height: 100%;
-}
-
-.main-wrapper {
-	height: 100%;
-	min-height: 100%;
+	background: url(../images/texture.jpg);
 }
 
 main {
@@ -27,7 +23,6 @@ main {
 }
 
 .section {
-	min-height: 100%;
 
 	.twig--green {
 		background: url(../images/twig-green.png) repeat-x 0 bottom;
@@ -40,4 +35,10 @@ main {
 
 h1 {
 	margin: 0;
+}
+
+@media screen and (max-width: 1366px) {
+	html {
+		font-size: 12px;
+	}
 }

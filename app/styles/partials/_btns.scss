@@ -152,7 +152,8 @@
 			height: 47rem / $hfs;
 			margin: 0 0 0 -40rem / $hfs;
 
-			background: url(../images/mouse.png);
+			background: url(../images/mouse.png) no-repeat 0 0;
+			background-size: 100% 100%;
 		}
 	}
 }

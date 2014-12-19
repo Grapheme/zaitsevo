@@ -1,6 +1,8 @@
 .section-main {
 	position: relative;
 	background: url(../images/texture.jpg);
+	height: 714px;
+	margin-top: 71rem / $hfs;
 
 	h1 {
 		position: absolute;
@@ -27,6 +29,7 @@
 			margin: 0 0 0 -99rem / $hfs;
 
 			background: url('../images/h1-dec.png') no-repeat 0 0;
+			background-size: 100% 100%;
 		}
 	}
 
