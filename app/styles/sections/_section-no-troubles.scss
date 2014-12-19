@@ -1,5 +1,5 @@
 .section-no-troubles {
-	min-height: 378px;
+	min-height: 378rem / $hfs;
 
 	background: url(../images/no-troubles.jpg) no-repeat 0 0;
 	background-size: cover;
@@ -8,12 +8,12 @@
 
 	h2 {
 		margin: 0;
-		padding: 100px 0 71px;
+		padding: 100rem / $hfs 0 71rem / $hfs;
 
 		font-family: 'room', sans-serif;
 		font-weight: 600;
-		font-size: 38px;
-		line-height: 28px;
+		font-size: 38em / $hfs;
+		line-height: 28em / 38em * 1em;
 
 		color: #fff;
 		text-shadow: 0 3px rgba(0, 0, 0, .26);

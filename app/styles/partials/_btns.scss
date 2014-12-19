@@ -2,17 +2,17 @@
 	transition: all .4s ease;
 	display: inline-block;
 
-	height: 58px;
-	padding: 0 38px;
+	height: 58rem / $hfs;
+	padding: 0 38rem / $hfs;
 	border: none;
 
-	border-radius: 32px;
+	border-radius: 32rem / $hfs;
 
 	font-family: 'osnova_pro', sans-serif;
-	font-size: 20px;
+	font-size: 20em / $hfs;
 	font-weight: 800;
 
-	line-height: 58px;
+	line-height: 58em / 20em * 1em;
 
 	background: #fff;
 	
@@ -25,12 +25,12 @@
 
 	&.btn--big-green {
 		width: 100%;
-		height: 95px;
+		height: 95rem / $hfs;
 
 		border-radius: 0;
 
-		line-height: 95px;
-		font-size: 27px;
+		line-height: 95em / 27em * 1em;
+		font-size: 27em / $hfs;
 
 		background: $clr-green;
 		color: #fff;
@@ -42,19 +42,19 @@
 	}
 
 	&.btn--small {
-		height: 48px;
-		padding: 0 23px;
+		height: 48rem / $hfs;
+		padding: 0 23rem / $hfs;
 
-		line-height: 48px;
+		line-height: 48em / 18em * 1em;
 
-		font-size: 18px;
+		font-size: 18em / $hfs;
 
 		&.btn--decorated {
 			&:before {
-				left: 14px;
+				left: 14rem / $hfs;
 			}
 			&:after {
-				right: 14px;				
+				right: 14rem / $hfs;				
 			}
 		}
 	}
@@ -92,7 +92,7 @@
 			content: "•";
 			position: absolute;
 			top: 0;
-			left: 23px;
+			left: 23rem / $hfs;
 
 			color: $clr-light-brown
 		}
@@ -101,7 +101,7 @@
 			content: "•";
 			position: absolute;
 			top: 0;
-			right: 23px;
+			right: 23rem / $hfs;
 
 			color: $clr-light-brown;
 		}
@@ -109,16 +109,16 @@
 		&:hover {
 
 			&:before {
-				transform: translateX(-76px);
+				transform: translateX(-76rem / $hfs);
 			}
 			&:after {
-				transform: translateX(76px);
+				transform: translateX(76rem / $hfs);
 			}
 		}
 	}
 	&.btn--scroll {
 		overflow: visible;
-		padding: 0 47px;
+		padding: 0 47rem / $hfs;
 
 		background: #f9fcfc;
 
@@ -126,10 +126,10 @@
 
 		&.btn--decorated {
 			&:before {
-				left: 23px;
+				left: 23rem / $hfs;
 			}
 			&:after {
-				right: 23px;				
+				right: 23rem / $hfs;				
 			}
 		}
 
@@ -148,9 +148,9 @@
 			bottom: 100%;
 			left: 50%;
 
-			width: 79px;
-			height: 47px;
-			margin: 0 0 0 -40px;
+			width: 79rem / $hfs;
+			height: 47rem / $hfs;
+			margin: 0 0 0 -40rem / $hfs;
 
 			background: url(../images/mouse.png);
 		}

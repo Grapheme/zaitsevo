@@ -1,3 +1,5 @@
+// Main module
+
 var App = (function(){
 	'use strict';
 
@@ -154,5 +156,160 @@ var App = (function(){
 	};
 
 	$('.objects-list').objectTabs();
+
+	//Page transitions plugin
+	jQuery.fn.pageTransitions = function() {
+		var $elem = $(this);
+		var $sections = $elem.find('.section');
+		var mousewheelCount = 0;
+		var direction = 'down';
+		var cooldown = true;
+
+		// using the event helper
+		$elem.mousewheel(function(event) {
+			//Return if we already triggered the event
+			if( cooldown == false ) return;
+
+			console.log(event.deltaX, event.deltaY, event.deltaFactor);
+
+			//If mousewheel down - go next section
+			if( event.deltaY < 0 ) {
+
+				if(event.deltaY == -1) {
+					mousewheelCount += 5;
+				} else {
+					++mousewheelCount;
+				} 
+			}
+			//If mousewheel up - go prev section
+			if( event.deltaY > 0 ) {
+
+				if(event.deltaY == 1) {
+					mousewheelCount -= 5;
+				} else {
+					--mousewheelCount;
+				}  
+			}
+
+			//Now check mouseWheelCount and trigger page changes
+			if(mousewheelCount >= 25) {
+				//Trigger next-section event
+				console.log('mousewheel go next');
+				$elem.trigger('next-section');
+
+				//Clear mousewheel count
+				mousewheelCount = 0;
+			}
+			if(mousewheelCount <= -25) {
+				//Trigger prev-section event
+				console.log('mousewheel go prev');
+				$elem.trigger('prev-section');
+
+				//Clear mousewheel count
+				mousewheelCount = 0;
+			}
+
+		});
+
+		$elem.bind('init', function(){
+			$sections.addClass('hidden').removeClass('active');
+			$sections.filter(':first-child').removeClass('hidden').addClass('active');
+		});
+
+		$elem.bind('show-section', function(e, index) {
+			//Show section triggered!
+			console.log('next-index is', index);
+
+			$sections.addClass('hidden').removeClass('active');
+			$sections.eq(index).removeClass('hidden').addClass('active');
+		});
+
+		$elem.bind('next-section', function() {
+			console.log('next-section triggered!');
+			var $current = $sections.filter('.active').index();
+
+			//If next elem exists
+			if( !$sections.eq( $current ).is(':last-child') ) {
+				$elem.trigger('show-section',[ $current + 1 ]);
+				console.log('go-go-next!')
+			}
+
+			cooldown = false;
+			setTimeout( function(){
+				cooldown = true;
+				console.log('cooldown cleaned');
+			}, 3000);
+		});
+
+		$elem.bind('prev-section', function() {
+			console.log('prev-section triggered!');
+			var $current = $sections.filter('.active').index();
+
+			//If prev elem exists
+			if( !$sections.eq( $current ).is(':first-child') ) {
+				$elem.trigger('show-section',[ $current - 1 ]);
+				console.log('go-go-prev!')
+			}
+
+			cooldown = false;
+			setTimeout( function(){
+				cooldown = true;
+			}, 1000);
+		});
+
+		//Init plugin
+		$elem.trigger('init');
+	};
+
+	$('.main-wrapper').pageTransitions();
+
+})();
+
+// Popup module
+
+var Popup = (function(){
+	'use strict';
+
+	var $overlay = $('.overlay');
+	var $popup = $('.popup');
+	var $close = $('.js-popup-close');
+	var $orderBtn = $('.js-btn-order');
+	var $html = $('html');
+
+	$close.click( function(){
+		Popup.close();
+	});
+
+	$popup.click( function(e){
+		e.stopPropagation();
+	});
+
+	$overlay.click( function(){
+		Popup.close();
+	});
+
+	$orderBtn.click( function(e){
+		e.preventDefault();
+		Popup.show('order-call');
+	});
+
+	return {
+
+		show: function(id){
+			$overlay.fadeIn( 400 );
+			$popup.removeClass('active');
+			$('[data-popup="' + id + '"]').addClass('active');
+
+			$html.css({ overflow: 'hidden' });
+		},
+
+		close: function(){
+			$overlay.fadeOut( 400 );
+			$popup.removeClass('active');
+
+			$html.removeAttr('style');
+		}
+
+	};
 
 })();

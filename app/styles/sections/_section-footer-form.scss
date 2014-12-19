@@ -1,10 +1,10 @@
 .section-footer-form {
 	position: relative;
-	padding: 241px 0 254px;
+	padding: 241rem / $hfs 0 254rem / $hfs;
 	background: url(../images/texture.jpg);
 
 	.section-cont {
-		max-width: 1140px;
+		max-width: 1140rem / $hfs;
 		margin: 0 auto;
 	}
 
@@ -24,8 +24,8 @@
 
 		width: 48.666666%;
 		margin: 0 2.666666% 0 0;
-		padding: 0 38px;
-		height: 735px;
+		padding: 0 38rem / $hfs;
+		height: 735rem / $hfs;
 
 		background: #fff;
 
@@ -34,11 +34,11 @@
 		}
 
 		&.callback {
-			height: 389px;
+			height: 389rem / $hfs;
 		}
 
 		&.feedback {
-			height: 642px;
+			height: 642rem / $hfs;
 		}
 
 		.btn--big-green {
@@ -52,8 +52,8 @@
 		display: table;
 
 		width: 100%;
-		height: 125px;
-		margin: 0 0 23px;
+		height: 125rem / $hfs;
+		margin: 0 0 23rem / $hfs;
 
 		h2 {
 			display: table-cell;
@@ -61,33 +61,33 @@
 
 			font-family: 'room', sans-serif;
 			text-transform: uppercase;
-			font-size: 22px;
+			font-size: 22em / $hfs;
 		}
 	}
 
 	.section-form-body {
 
 		p {
-			margin: 0 0 24px;
+			margin: 0 0 24rem / $hfs;
 
-			font-size: 15px;
-			line-height: 24px;
+			font-size: 15em / $hfs;
+			line-height: 24em / 15em * 1em;
 		}
 	}
 
 	.feedback-form {
 
 		fieldset {
-			margin: 0 0 28px;
+			margin: 0 0 28rem / $hfs;
 		}
 
 		textarea {
 			width: 100%;
-			height: 235px;
+			height: 235rem / $hfs;
 
 			border: none;
-			font-size: 18px;
-			line-height: 41px;
+			font-size: 18em / $hfs;
+			line-height: 41em / 18em * 1em;
 
 			background: url(../images/textarea.jpg) 78px 0 / 100% 78px;
 
@@ -96,11 +96,11 @@
 
 		label {
 			display: block;
-			margin: 0 0 14px;
+			margin: 0 0 14rem / $hfs;
 
 			font-family: 'room', sans-serif;
-			font-size: 18px;
-			line-height: 29px;
+			font-size: 18em / $hfs;
+			line-height: 29em / 18em * 1em;
 			text-transform: uppercase;
 			font-weight: 500;
 		}
@@ -126,5 +126,13 @@
 				}
 			}
 		}
+	}
+
+	.fb-like-box {
+		position: absolute;
+		top: 109%;
+		left: 0;
+
+	    background: #fff;
 	}
 }

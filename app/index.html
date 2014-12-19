@@ -23,6 +23,14 @@
 		<!-- endbuild -->
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -33,7 +41,7 @@
 				<div class="phone">
 					<a class="phone-link" href="tel:+78633113906">8 (863) <strong>311-39-06</strong></a>
 				</div>
-				<div class="order-a-call btn btn--small btn--green btn--decorated">
+				<div class="order-a-call btn btn--small btn--green btn--decorated js-btn-order">
 					Заказать звонок
 				</div>
 			</div>
@@ -253,7 +261,7 @@
 				<h2>
 					Все, о чем вы мечтали, по цене квартиры в гетто!
 				</h2>
-				<a href="#" class="btn btn--blue btn--decorated">Заказать звонок</a>
+				<a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
 			</section>
 		<!-- End of getto section -->
 
@@ -518,7 +526,7 @@
 		<!-- End of objects section -->
 
 		<!-- House project section -->
-			<section class="section section-houses-proj">
+			<section class="section section-houses-proj hidden">
 
 				<div class="section-cont">
 					
@@ -728,7 +736,7 @@
 				<h2>
 					Идеальное место для беззаботной жизни вашей семьи!
 				</h2>
-				<a href="#" class="btn btn--blue btn--decorated">Заказать звонок</a>
+				<a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
 			</section>
 		<!-- End of getto section -->
 
@@ -757,6 +765,11 @@
 							<button class="btn btn--big-green">
 								Обратный звонок
 							</button>
+
+							<div class="fb-like-box" data-href="https://www.facebook.com/zaitsevo" data-width="300" data-height="217" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+
+							
+							
 						</div>
 
 					</div><!--
@@ -812,10 +825,14 @@
 				<div class="social">
 					<ul class="social-list">
 						<li class="social-item">
-							<a href="#"></a>
+							<a href="#">
+								<span class="icon icon-facebook"></span>
+							</a>
 						</li>
 						<li class="social-item">
-							<a href="#"></a>
+							<a href="#">
+								<span class="icon icon-instagram"></span>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -825,6 +842,85 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="overlay">
+			<div class="overlay-close js-popup-close">
+				<span class="icon icon-cross"></span>
+			</div>
+			<div class="popup order-call" data-popup="order-call">
+
+				<form class="order-call-form">
+
+					<fieldset>
+						<input type="text" placeholder="Имя *">
+					</fieldset>
+
+					<fieldset>
+						<input type="text" placeholder="Телефон *">
+					</fieldset>
+
+					<fieldset>
+						<textarea placeholder="Комментарий">
+							
+						</textarea>
+					</fieldset>
+
+					<div class="order-call-hint">
+						* - поля, отмеченные звездочкой, обязательны для заполнения
+					</div>
+
+					<button class="btn btn--big-green">
+						Заказать звонок
+					</button>
+				</form>
+			</div>
+			<div class="popup leave-apply" data-popup="leave-apply">
+
+				<form class="leave-apply-form clearfix">
+
+					<div class="column column-half">
+
+						<fieldset>
+
+							<h3>Заявитель</h3>
+
+							<label class="checkbox-label">
+								<input type="checkbox"> Эко-дом
+							</label>
+
+							<label class="checkbox-label">
+								<input type="checkbox"> Ландшафтная архитектура
+							</label>
+
+							<input type="text" placeholder="Название проекта*">
+						</fieldset>
+
+						<fieldset>
+
+							<h3>Заявитель</h3>
+							
+							<input type="text" placeholder="ФИО заявителя">
+
+							<textarea>
+								
+							</textarea>
+
+						</fieldset>
+					</div>
+
+					<div class="column column-half">
+
+						<fieldset>
+							
+						</fieldset>
+
+						<fieldset>
+							
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
@@ -842,6 +938,7 @@
 		<script src="../bower_components/fancybox/source/jquery.fancybox.js"></script>
 		<script src="../bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 		<script src="../bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+		<script src="../bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 

@@ -8,21 +8,23 @@
 		left: 0;
 
 		width: 100%;
-		margin: -74px 0 0 0;
+		margin: -74rem / $hfs 0 0 0;
 
 		text-align: center;
 
-		font: 46px / 37px 'room', sans-serif;
+		font-size: 46em / $hfs;
+		line-height: 37em / 46em * 1;
+		font-family: 'room', sans-serif;
 
 		&:after {
 			content: '';
 			position: absolute;
-			bottom: -79px;
+			bottom: -79rem / $hfs;
 			left: 50%;
 
-			width: 188px;
-			height: 45px;
-			margin: 0 0 0 -99px;
+			width: 188rem / $hfs;
+			height: 45rem / $hfs;
+			margin: 0 0 0 -99rem / $hfs;
 
 			background: url('../images/h1-dec.png') no-repeat 0 0;
 		}
@@ -32,7 +34,7 @@
 		position: absolute;
 		top: 50%;
 		width: 100%;
-		margin-top: 200px;
+		margin-top: 200rem / $hfs;
 		text-align: center;
 	}
 
@@ -41,16 +43,16 @@
 			position: absolute;
 			
 			&.cloud--small {
-				width: 231px;
-				height: 127px;
+				width: 231rem / $hfs;
+				height: 127rem / $hfs;
 
 				background: url(../images/cloud-small.png) no-repeat 0 0;
 				background-size: 100% 100%;
 			}
 
 			&.cloud--big {
-				width: 328px;
-				height: 181px;
+				width: 328rem / $hfs;
+				height: 181rem / $hfs;
 
 				background: url(../images/cloud-big.png) no-repeat 0 0;
 				background-size: 100% 100%;

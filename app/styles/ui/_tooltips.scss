@@ -1,27 +1,27 @@
 .main-tooltips {
-	width: 262px;
+	width: 262rem / $hfs;
 	background: #fff;
 }
 /* Use this next selector to style things like font-size and line-height: */
 .main-tooltips {
 	.tooltipster-content {
-		font-size: 14px;
-		line-height: 16px;
-		padding: 0 39px 32px;
+		font-size: 14em / $hfs;
+		line-height: 16em / 14em * 1em;
+		padding: 0 39rem / $hfs 32rem / $hfs;
 	}
 	.tooltip-head {
 		position: relative;
 		display: table;
-		padding: 0 0 0 61px;
-		height: 123px;
+		padding: 0 0 0 61rem / $hfs;
+		height: 123rem / $hfs;
 
 		h3 {
 			display: table-cell;
 			vertical-align: middle;
 
 			font-family: 'room', sans-serif;
-			font-size: 22px;
-			line-height: 23px;
+			font-size: 22em / $hfs;
+			line-height: 23em / 22em * 1em;
 			text-transform: uppercase;
 		}
 
@@ -36,8 +36,8 @@
 	}
 	.tooltip-body {
 		font-family: 'osnova_pro', sans-serif;
-		font-size: 15px;
-		line-height: 24px;
+		font-size: 15em / $hfs;
+		line-height: 24em / 15em * 1em;
 
 		p {
 			margin: 0;

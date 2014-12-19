@@ -1,16 +1,16 @@
 .section-about {
 	position: relative;
-	padding: 0 0 76px;
+	padding: 155rem / $hfs 0 76rem / $hfs;
 	background: url(../images/texture.jpg);
 
 	.section-cont {
-		max-width: 1140px;
+		max-width: 1140rem / $hfs;
 		margin: 0 auto;
 	}
 
 	.adv-list {
 		@extend .list-unstyled;
-		margin: 0 0 76px;
+		margin: 0 0 76rem / $hfs;
 	}
 
 	.btn-scroll-cont {
@@ -23,9 +23,9 @@
 		vertical-align: top;
 
 		width: 23%;
-		height: 312px;
-		margin: 0 2.666666% 62px 0;
-		padding: 0 33px 33px;
+		height: 312rem / $hfs;
+		margin: 0 2.666666% 62rem / $hfs 0;
+		padding: 0 33rem / $hfs 33rem / $hfs;
 
 		background: #fff;
 
@@ -35,7 +35,7 @@
 
 		&.adv-item--big {
 			width: 48.666666%;
-			height: 394px;
+			height: 394rem / $hfs;
 
 			& + .adv-item--big {
 				margin: 0;
@@ -43,9 +43,9 @@
 
 			.adv-item-head {
 				width: 100%;
-				height: 129px;
-				padding: 0 0 35px;
-				margin: 0 0 20px;
+				height: 129rem / $hfs;
+				padding: 0 0 35rem / $hfs;
+				margin: 0 0 20rem / $hfs;
 			}
 
 			.twig--green {
@@ -66,7 +66,7 @@
 		position: relative;
 		display: table;
 		width: 100%;
-		height: 152px;
+		height: 152rem / $hfs;
 
 		h3 {
 			display: table-cell;
@@ -75,8 +75,8 @@
 			margin: 0;
 
 			font-family: 'room', sans-serif;
-			font-size: 22px;
-			line-height: 23px;
+			font-size: 22em / $hfs;
+			line-height: 23em / 22em * 1em ;
 
 			text-transform: uppercase;
 		}
@@ -85,25 +85,25 @@
 	.adv-item-body {	
 
 		p {
-			margin: 0 0 24px;
+			margin: 0 0 24rem / $hfs;
 
-			font-size: 15px;
-			line-height: 24px;
+			font-size: 15em / $hfs;
+			line-height: 24em / 15em * 1em;
 		}
 	}
 
 	.adv-item-links {
 		position: absolute;
-		bottom: 33px;
-		left: 33px;
+		bottom: 33rem / $hfs;
+		left: 33rem / $hfs;
 
 		width: 100%;
-		height: 52px;
-		line-height: 52px;
+		height: 52rem / $hfs;
+		line-height: 52rem / $hfs;
 
 		.icon {
 		    font-size: 3.5em;
-		    margin-right: 15px;
+		    margin-right: 15rem / $hfs;
 		    vertical-align: middle;
 
 		    color: $clr-icons;
@@ -117,7 +117,7 @@
 
 			color: inherit;
 			font-family: 'osnova_pro', sans-serif;
-			font-size: 14px;
+			font-size: 14em / $hfs;
 			font-weight: 600;
 			line-height: .9rem;
 			text-transform: uppercase;
