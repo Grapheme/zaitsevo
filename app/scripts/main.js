@@ -159,8 +159,47 @@ var App = (function(){
 
 	var s = skrollr.init({
 		constants: {
-			map: parseInt( $('.section-map').offset().top ) - $('.section-map').height(),
-			mapEnd: parseInt( $('.section-map').offset().top )
+			map: parseInt( $('.section-map').offset().top ),
+			mapend: parseInt( $('.section-map').offset().top + $('.section-map').height() )
+		}
+	});
+
+	//The options (second parameter) are all optional. The values shown are the default values.
+	skrollr.menu.init(s, {
+	});
+
+	//Form elements init
+	$('.checkbox').button();
+
+	//Mask for phone
+	$('.phone-input').inputmask("mask", {"mask": "[+7] (999) 999-9999", showMaskOnHover: false});
+
+	// Validation
+	$('#feedback-form').validate({
+		rules: {
+			phone: 'required',
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			phone: 'Обязательное поле',
+			email: {
+				required: 'Обязательное поле',
+				email: 'Неверный формат'
+			}
+		}
+	});
+
+	$('.order-call-form').validate({
+		rules: {
+			phone: 'required',
+			name: 'required'
+		},
+		messages: {
+			phone: 'Обязательное поле',
+			name: 'Обязательное поле'
 		}
 	});
 
@@ -175,6 +214,7 @@ var Popup = (function(){
 	var $popup = $('.popup');
 	var $close = $('.js-popup-close');
 	var $orderBtn = $('.js-btn-order');
+	var $competBtn = $('.js-btn-compet');
 	var $html = $('html');
 
 	$close.click( function(){
@@ -192,6 +232,11 @@ var Popup = (function(){
 	$orderBtn.click( function(e){
 		e.preventDefault();
 		Popup.show('order-call');
+	});
+
+	$competBtn.click( function(e){
+		e.preventDefault();
+		Popup.show('leave-apply');
 	});
 
 	return {

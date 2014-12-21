@@ -103,6 +103,10 @@
 			line-height: 29em / 18em * 1em;
 			text-transform: uppercase;
 			font-weight: 500;
+
+			&.error {
+				font-size: 1em;
+			}
 		}
 
 		input {
