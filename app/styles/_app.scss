@@ -37,6 +37,10 @@ h1 {
 	margin: 0;
 }
 
+input, textarea {
+	outline: none;
+}
+
 @media screen and (max-width: 1366px) {
 	html {
 		font-size: 12px;

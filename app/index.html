@@ -35,7 +35,7 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<header class="main-header" data-start="box-shadow: 6px 0px 0px 0 rgba(0, 0, 0, 0);" data--155-top="box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3);">
+		<header class="main-header" data-start="box-shadow: 6px 0px 0px 0 rgba(0, 0, 0, 0);" data--155-top="box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3); background-position: 0 0;" data-_map--10p="background-position: 0 0%;" data-_map-10p="background-position: 0 200%; box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);" data-_mapend--10p="background-position: 0 200%;" data-_mapend-49p="background-position: 0 200%;" data-_mapend-50p="background-position: 0 0%; box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3);">
 
 			<div class="contacts">
 				<div class="phone">
@@ -53,19 +53,19 @@
 			<nav role="navigation">
 				<ul class="nav-list">
 					<li class="nav-list-item">
-						<a href="#about">О поселке</a>
+						<a href="#about" data-anchor-target="#about" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">О поселке</a>
 					</li>
 					<li class="nav-list-item">
-						<a href="#map">Карта</a>
+						<a href="#map" data-anchor-target="#map" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Карта</a>
 					</li>
 					<li class="nav-list-item">
-						<a href="#infrastructure">Инфраструктура</a>
+						<a href="#infrastructure" data-anchor-target="#infrastructure" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Инфраструктура</a>
 					</li>
 					<li class="nav-list-item">
-						<a href="#areas">Участки</a>
+						<a href="#areas" data-anchor-target="#areas" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Участки</a>
 					</li>
 					<li class="nav-list-item">
-						<a href="#spec-offering">Спецпредложения</a>
+						<a href="#spec-offering" data-anchor-target="#spec-offering" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Спецпредложения</a>
 					</li>
 				</ul>
 			</nav>
@@ -96,7 +96,7 @@
 		<!-- End of main section -->
 
 		<!-- About section -->
-			<section id="about" class="section section-about">
+			<section id="about" data-menu-offset="-150" class="section section-about">
 
 				<div class="section-cont">
 
@@ -180,7 +180,7 @@
 								</p>
 							</div>
 							<div class="adv-item-links">
-								<span class="icon icon-jpg"></span> <a href="#">Скачать генплан</a>
+								<span class="icon icon-jpg"></span> <a href="files/genplan.pdf">Скачать генплан</a>
 							</div>
 						</li><!--
 
@@ -199,7 +199,7 @@
 								</p>
 							</div>
 							<div class="adv-item-links">
-								<span class="icon icon-pdf"></span> <a href="#">Посмотреть сертификат</a>
+								<span class="icon icon-pdf"></span> <a href="files/certificate.pdf">Посмотреть сертификат</a>
 							</div>
 						</li>
 					</ul>
@@ -215,7 +215,7 @@
 		<!-- End of about section -->
 
 		<!-- Map section -->
-			<section id="map" data-menu-top="500" class="section section-map">
+			<section id="map" data-menu-offset="100" class="section section-map">
 
 				<img src="images/map.jpg" alt="" data-75p-top="transform: translate(0, 5%)" data-35p-top="transform: translate(0,0)">
 
@@ -656,7 +656,7 @@
 								организации? Закажите звонок, мы свяжемся в течение 5 минут!
 							</p>
 
-							<button class="btn btn--big-green">
+							<button class="btn btn--big-green js-btn-order">
 								Обратный звонок
 							</button>
 
@@ -701,14 +701,19 @@
 							</form>
 						</div>
 					</div>
-				</div>				
+
+				</div>
+
+				<h3 class="last-slogan">
+					Зайцево — лучший дом на земле!
+				</h3>		
 			</section>
 		<!-- End of footer form section-->
 
 		</div>
 
 		<footer class="main-footer" data-_map--100p="background-position: 0 0%;" data-_map-10p="background-position: 0 -200%" data-_mapend-50p="background-position: 0 0%;">
-			<div class="footer-houses" data-_map--100p="transform: translate(0, 0%) scale(1); background-image: url(../images/footers/main-footer.png); background-size: auto 100%; background-repeat: no-repeat;" data-_map--50p="transform: translate(0, 120%) scale(0)" data-_mapend-40p="background-image: url(../images/footers/grant-footer.png)" data-_mapend-50p="transform: translate(0, 0%) scale(1);">
+			<div class="footer-houses" data-_map--100p="transform: translate(0, 0%) scale(1); background-image: url(../images/footers/main-footer.png); background-size: auto 100%; background-repeat: no-repeat;" data-_map--50p="transform: translate(0, 120%) scale(0)" data-_mapend-40p="background-image: url(../images/footers/grant-footer.png)" data-_mapend-50p="transform: translate(0, 0%) scale(1);" data-_ffooter--60p="transform: translate(0, 0%) scale(1);" data-_ffooter--50p="transform: translate(0, 120%) scale(0)" data-_ffooter-15p="background-image: url(../images/footers/final-footer.png);" data-_ffooter-20p="transform: translate(0, 0) scale(1)">
 				
 			</div>
 			<div class="footer-cont" data-_map--100p="background-position: 0 0%; background-repeat: repeat-x" data-_map-10p="background-position: 0 -400%; background-repeat: no-repeat" data-_mapend-50p="background-position: 0 0%; background-repeat: repeat">
@@ -743,6 +748,7 @@
 				<span class="icon icon-cross"></span>
 			</div>
 			<div class="popup order-call" data-popup="order-call">
+				<div class="popup-logo"></div>
 
 				<form class="order-call-form">
 
@@ -770,7 +776,7 @@
 				</form>
 			</div>
 			<div class="popup leave-apply" data-popup="leave-apply">
-
+				<div class="popup-logo"></div>
 				<form class="leave-apply-form clearfix">
 
 					<div class="clearfix">
@@ -838,7 +844,7 @@
 						</button>
 					</div>					
 				</form>
-			</div>
+			</div>			
 		</div>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

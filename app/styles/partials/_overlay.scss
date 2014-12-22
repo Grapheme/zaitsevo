@@ -23,6 +23,16 @@
 		}
 	}
 
+	.popup-logo {
+		width: 178rem / $hfs;
+		height: 116rem / $hfs;
+
+		margin: 5rem auto;
+
+		background: url(../images/logo.png) no-repeat 0 0;
+		background-size: 100% 100%;
+	}
+
 	.overlay-close {
 		position: absolute;
 		top: 50rem / $hfs;
@@ -39,7 +49,6 @@
 	//Order-call
 	.order-call {
 		position: absolute;
-		top: 20%;
 		left: 50%;
 		width: 586rem / $hfs;
 		height: 489rem / $hfs;
@@ -89,7 +98,7 @@
 
 	//Apply form
 	.leave-apply {
-		padding: 5% 0;
+		padding: 0 0 5% 0;
 	}
 	.leave-apply-form {
 		max-width: 1140rem / $hfs;

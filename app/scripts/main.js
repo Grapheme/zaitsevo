@@ -158,9 +158,12 @@ var App = (function(){
 	$('.objects-list').objectTabs();
 
 	var s = skrollr.init({
+		forceHeight: false,
 		constants: {
 			map: parseInt( $('.section-map').offset().top ),
-			mapend: parseInt( $('.section-map').offset().top + $('.section-map').height() )
+			mapend: parseInt( $('.section-map').offset().top + $('.section-map').height() ),
+			ffooter: parseInt( $('.section-footer-form').offset().top ),
+			ffooterend: parseInt( $('.section-footer-form').offset().top + $('.section-map').height() )
 		}
 	});
 

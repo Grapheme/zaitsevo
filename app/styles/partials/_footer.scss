@@ -14,16 +14,17 @@
 
 	.footer-houses {
 		position: absolute;
-		top: -16rem / $hfs;
+		top: -3rem;
 		left: 50%;
 
 		max-width: 1140rem / $hfs;
 		width: 100%;
-		height: 100%;
+		height: 120%;
 		margin-left: -25%;
 
 		background: url(../images/footers/main-footer.png);
 		background-size: 97% auto;
+		background-position: center 0;
 	}
 
 	.footer-cont {
