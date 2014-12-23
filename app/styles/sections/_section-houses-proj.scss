@@ -1,0 +1,131 @@
+.section-houses-proj {
+	position: relative;
+	padding: 7.5rem 0 0;
+	background: url(../images/texture.jpg);
+
+	.section-cont {
+		max-width: 1140rem / $hfs;
+		margin: 0 auto 2%;
+		padding: 0 28rem / $hfs;
+		background: #fff;
+	}
+	h2 {
+		margin: 0 31rem / $hfs 37rem / $hfs;
+		padding: 50rem / $hfs 0 73rem / $hfs;
+
+		font-family: 'room', sans-serif;
+		font-size: 22em / $hfs;
+		line-height: 23em / 22em * 1em;
+		text-align: center;
+	}
+	.house-plan {
+		height: 651px;
+	}
+	.house-pict {
+		display: inline-block;
+		width: 50%;
+
+		img {
+			max-width: 100%;
+		}
+	}
+	.house-plan-top {
+		display: inline-block;
+		width: 50%;
+		text-align: center;
+
+		img {
+			max-width: 100%;
+		}
+	}
+	.house-props {
+		@extend .list-unstyled;
+		margin: 45rem / $hfs 0 2.66667%;
+		padding: 0 100rem / $hfs 35rem / $hfs;
+	}
+	.house-props-item {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		margin: 0 0 14rem / $hfs;
+		padding: 0 60rem / $hfs 0 1em;
+
+		font-size: 1.05em;
+		line-height: 24em / 15em * 1em;
+
+		&:after {
+			content: '•';
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			font-size: 1.25em;
+			color: $clr-light-brown;
+		}
+	}
+	.houses-list {
+		@extend .list-unstyled;
+		max-width: 1140rem / $hfs;
+		margin: 0 auto;
+	}
+	.houses-item {
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 15%;
+		height: 168rem / $hfs;
+		margin: 0 2% 2% 0;
+
+		cursor: pointer;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&.active {
+			.houses-item-desc {
+				opacity: 1;
+			}
+		}
+
+		&:hover {
+			.houses-item-desc {
+				opacity: 1;
+			}
+		}
+
+		.houses-item-cover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		.houses-item-desc {
+			transition: all .4s ease;
+			opacity: 0;
+			position: relative;
+			display: table;
+			height: 100%;
+			padding: 0 32rem / $hfs 0;
+
+			background: #fff;
+
+			font-family: 'room';
+			font-size: 16em / $hfs;
+			line-height: 23em / 22em * 1em;
+
+			span {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+}

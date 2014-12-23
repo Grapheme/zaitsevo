@@ -1,0 +1,131 @@
+.section-about {
+	position: relative;
+	padding: 76rem / $hfs 0 0;
+	background: url(../images/texture.jpg);
+
+	.section-cont {
+		max-width: 1140rem / $hfs;
+		margin: 0 auto;
+	}
+
+	.adv-list {
+		@extend .list-unstyled;
+		margin: 0 0 76rem / $hfs;
+	}
+
+	.btn-scroll-cont {
+		text-align: center;
+	}
+
+	.adv-item {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+
+		width: 23%;
+		height: 21rem;
+		margin: 0 2.666666% 62rem / $hfs 0;
+		padding: 0 33rem / $hfs 33rem / $hfs;
+
+		background: #fff;
+
+		&:nth-child(4n + 4) {
+			margin: 0;
+		}
+
+		&.adv-item--big {
+			width: 48.666666%;
+			height: 27.5rem;
+
+			& + .adv-item--big {
+				margin: 0;
+			}
+
+			.adv-item-head {
+				width: 100%;
+				height: 129rem / $hfs;
+				padding: 0 0 35rem / $hfs;
+				margin: 0 0 20rem / $hfs;
+			}
+
+			.twig--green {
+				background: url(../images/twig-green.png) repeat-x 0 bottom;
+			}
+
+			.twig--brown {
+				background: url(../images/twig-brown.png) repeat-x 0 bottom;
+			}
+
+			.adv-item-body {
+
+			}
+		}
+	}
+
+	.adv-item-head {
+		position: relative;
+		display: table;
+		width: 100%;
+		height: 152rem / $hfs;
+
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+
+			margin: 0;
+
+			font-family: 'room', sans-serif;
+			font-size: 22em / $hfs;
+			line-height: 23em / 22em * 1em ;
+
+			text-transform: uppercase;
+		}
+	}
+
+	.adv-item-body {	
+
+		p {
+			margin: 0 0 24rem / $hfs;
+
+			font-size: 1.05em;
+			line-height: 24em / 15em * 1em;
+		}
+	}
+
+	.adv-item-links {
+		position: absolute;
+		bottom: 33rem / $hfs;
+		left: 33rem / $hfs;
+
+		width: 100%;
+		height: 52rem / $hfs;
+		line-height: 52rem / $hfs;
+
+		.icon {
+		    font-size: 3.5em;
+		    margin-right: 15rem / $hfs;
+		    vertical-align: middle;
+
+		    color: $clr-icons;
+		}
+
+		a {
+			transition: all .4s ease;
+			display: inline-block;
+
+			border-bottom: 1px solid;
+
+			color: inherit;
+			font-family: 'osnova_pro', sans-serif;
+			font-size: 14em / $hfs;
+			font-weight: 600;
+			line-height: .9rem;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+}

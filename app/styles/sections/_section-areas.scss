@@ -1,0 +1,132 @@
+.section-areas {
+	position: relative;
+	padding: 7.5rem 0 254rem / $hfs;
+	background: url(../images/texture.jpg);
+
+	.section-cont {
+		max-width: 1140rem / $hfs;
+		margin: 0 auto;
+	}
+
+	.section-area-half {
+		display: inline-block;
+		vertical-align: top;
+
+		width: 48.666666%;
+		margin: 0 2.666666% 0 0;
+		padding: 0 38rem / $hfs;
+		height: 51rem;
+
+		background: #fff;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	.section-area-head {
+		display: table;
+
+		width: 100%;
+		height: 125rem / $hfs;
+		margin: 0 0 23rem / $hfs;
+
+		h2 {
+			display: table-cell;
+			vertical-align: middle;
+
+			font-family: 'room', sans-serif;
+			text-transform: uppercase;
+			font-size: 22em / $hfs;
+		}
+	}
+
+	.section-area-cont {
+
+		p {
+			margin: 0 0 24rem / $hfs;
+
+			font-size: 1.05em;
+			line-height: 24em / 15em * 1em;
+		}
+
+		strong {
+
+			font-weight: 600;
+		}
+	}
+
+	.section-area-imgs {
+
+		@extend .list-unstyled;
+		margin: 0 0 24rem / $hfs;
+
+		.section-area-img {
+			display: inline-block;
+			vertical-align: top;
+
+			border: 1px solid $clr-light-brown;
+			border-radius: 1px;
+		}
+	}
+
+	.section-area-areas {
+		position: relative;
+
+		padding: 32rem / $hfs 0 32rem / $hfs 46rem / $hfs;
+
+		background: #99c29f;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 12rem / $hfs;
+			right: 15rem / $hfs;
+
+			width: 99rem / $hfs;
+			height: 111rem / $hfs;
+
+			background: url(../images/people.png) no-repeat 0 0;
+			background-size: 100% 100%;
+		}
+
+		.section-area-area {
+			
+			font-size: 1.05em;
+			line-height: 35em / 15em * 1em;
+			text-transform: lowercase;
+		}
+	}
+
+	.arch-competition {		
+		position: relative;
+		padding: 32rem / $hfs 0 32rem / $hfs 46rem / $hfs;
+		background: #92c7cd;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 14rem / $hfs;
+			right: 18rem / $hfs;
+
+			width: 67rem / $hfs;
+			height: 123rem / $hfs;
+
+			background: url(../images/people-2.png) no-repeat 0 0;
+			background-size: 100% 100%; 
+		}
+
+		h3 {
+			margin: 0 0 20rem / $hfs;
+
+			font-family: 'room', sans-serif;
+			font-size: 22em / $hfs;
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		.btn {
+			margin: 4rem / $hfs 0 6rem / $hfs;
+		}
+	}
+}
