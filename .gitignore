@@ -16,6 +16,7 @@ less
 *.clpprj
 Thumbs.db
 
+/app/images
 /app/config/database.php
 /app/storage
 /app/lang

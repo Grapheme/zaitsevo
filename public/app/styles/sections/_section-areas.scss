@@ -71,7 +71,11 @@
 	}
 
 	.section-area-areas {
-		position: relative;
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		right: 2rem;
+		margin: 0;
 
 		padding: 32rem / $hfs 0 32rem / $hfs 46rem / $hfs;
 
@@ -99,7 +103,11 @@
 	}
 
 	.arch-competition {		
-		position: relative;
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		right: 2rem;
+		
 		padding: 32rem / $hfs 0 32rem / $hfs 46rem / $hfs;
 		background: #92c7cd;
 
