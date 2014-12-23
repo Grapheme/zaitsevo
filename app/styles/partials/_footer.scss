@@ -8,7 +8,7 @@
 
 	padding: 0 65rem / $hfs;
 
-	font: 15em / $hfs 'osnova_pro', sans-serif;
+	font: 1.05em 'osnova_pro', sans-serif;
 
 	background: url(../images/footer.png) repeat-x 0 top;
 
@@ -57,9 +57,14 @@
 			line-height: 76rem / $hfs;
 
 			a {
+				transition: all .4s ease;
 				font-size: 2em;
 				text-decoration: none;
 				color: $clr-black-green;
+
+				&:hover {
+					color: lighten($clr-black-green, 20%);
+				}
 			}
 
 			.icon-instagram {
@@ -72,5 +77,31 @@
 		float: right;
 		margin-right: 65rem / $hfs;
 		line-height: 76rem / $hfs;
+
+		a {
+			position: relative;
+			color: inherit;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:after {
+				transition: all .4s ease;
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+
+				width: 0;
+				border-bottom: 1px solid;
+			}
+
+			&:hover {
+				
+				&:after {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
 	}
 }

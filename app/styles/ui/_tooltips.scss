@@ -3,13 +3,13 @@
 	z-index: 0 !important;
 }
 .main-tooltips {
-	width: 262rem / $hfs;
+	width: 312rem / $hfs;
 	background: #fff;
 }
 /* Use this next selector to style things like font-size and line-height: */
 .main-tooltips {
 	.tooltipster-content {
-		font-size: 14em / $hfs;
+		font-size: 1em;
 		line-height: 16em / 14em * 1em;
 		padding: 0 39rem / $hfs 32rem / $hfs;
 	}
@@ -40,7 +40,7 @@
 	}
 	.tooltip-body {
 		font-family: 'osnova_pro', sans-serif;
-		font-size: 15em / $hfs;
+		font-size: 1.05em;
 		line-height: 24em / 15em * 1em;
 
 		p {

@@ -29,16 +29,27 @@
 		float: left;
 	}
 	.phone {
+		margin: -1em 0 .25em;
 		font-size: 22em / $hfs;
-		line-height: 37 / 22 * 1em;
+		line-height: 32 / 22 * 1em;
 
-		.phone-link {
+		& > a {
+			display: block;
 			color: $clr-black-green;
 			text-decoration: none;
 
-			strong {
-				font-size: 32px;
+			&:last-child {
+				display: inline-block;
+				font-size: .8em;
+
+				b {
+					font-weight: 400;
+				}
 			}
+		}
+
+		.phones-delim {
+			font-size: .7em;
 		}
 	}
 }

@@ -1,10 +1,11 @@
 .section-houses-proj {
 	position: relative;
+	padding: 7.5rem 0 0;
 	background: url(../images/texture.jpg);
 
 	.section-cont {
 		max-width: 1140rem / $hfs;
-		margin: 0 auto;
+		margin: 0 auto 2%;
 		padding: 0 28rem / $hfs;
 		background: #fff;
 	}
@@ -17,13 +18,25 @@
 		line-height: 23em / 22em * 1em;
 		text-align: center;
 	}
+	.house-plan {
+		height: 651px;
+	}
 	.house-pict {
 		display: inline-block;
 		width: 50%;
+
+		img {
+			max-width: 100%;
+		}
 	}
 	.house-plan-top {
 		display: inline-block;
 		width: 50%;
+		text-align: center;
+
+		img {
+			max-width: 100%;
+		}
 	}
 	.house-props {
 		@extend .list-unstyled;
@@ -38,7 +51,7 @@
 		margin: 0 0 14rem / $hfs;
 		padding: 0 60rem / $hfs 0 1em;
 
-		font-size: 15em / $hfs;
+		font-size: 1.05em;
 		line-height: 24em / 15em * 1em;
 
 		&:after {
@@ -61,14 +74,20 @@
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
-		width: 23%;
-		height: 268rem / $hfs;
-		margin: 0 2.66667% 2.66667% 0;
+		width: 15%;
+		height: 168rem / $hfs;
+		margin: 0 2% 2% 0;
 
 		cursor: pointer;
 
 		&:last-child {
 			margin: 0;
+		}
+
+		&.active {
+			.houses-item-desc {
+				opacity: 1;
+			}
 		}
 
 		&:hover {
@@ -86,6 +105,7 @@
 
 			background-repeat: no-repeat;
 			background-size: cover;
+			background-position: center center;
 		}
 
 		.houses-item-desc {
@@ -94,12 +114,12 @@
 			position: relative;
 			display: table;
 			height: 100%;
-			padding: 0 42rem / $hfs;
+			padding: 0 32rem / $hfs 0;
 
 			background: #fff;
 
 			font-family: 'room';
-			font-size: 22em / $hfs;
+			font-size: 16em / $hfs;
 			line-height: 23em / 22em * 1em;
 
 			span {

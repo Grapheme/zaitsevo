@@ -23,7 +23,7 @@
 		vertical-align: top;
 
 		width: 23%;
-		height: 312rem / $hfs;
+		height: 21rem;
 		margin: 0 2.666666% 62rem / $hfs 0;
 		padding: 0 33rem / $hfs 33rem / $hfs;
 
@@ -35,7 +35,7 @@
 
 		&.adv-item--big {
 			width: 48.666666%;
-			height: 394rem / $hfs;
+			height: 27.5rem;
 
 			& + .adv-item--big {
 				margin: 0;
@@ -87,7 +87,7 @@
 		p {
 			margin: 0 0 24rem / $hfs;
 
-			font-size: 15em / $hfs;
+			font-size: 1.05em;
 			line-height: 24em / 15em * 1em;
 		}
 	}

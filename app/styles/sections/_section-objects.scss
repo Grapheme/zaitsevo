@@ -1,6 +1,6 @@
 .section-objects {
 	position: relative;
-	padding: 241rem / $hfs 0 0;
+	padding: 241rem / $hfs 0 7.5rem;
 	background: url(../images/texture.jpg);
 
 	.section-cont {
@@ -139,7 +139,7 @@
 	.obj-tab-body {
 		p {
 			margin-top: 0;
-			font-size: 15em / $hfs;
+			font-size: 1.05em;
 			line-height: 24em / 15em * 1em;
 		}
 	}

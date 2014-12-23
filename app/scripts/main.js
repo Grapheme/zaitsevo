@@ -155,7 +155,23 @@ var App = (function(){
 		});
 	};
 
+	//House plans plugin
+	jQuery.fn.housePlans = function() {
+		var $elem = $(this);
+		var $housePlans = $elem.find('.house-plan');
+		var $houseTrigger = $elem.find('.houses-item');
+
+		$houseTrigger.click( function(){
+			var plan = $(this).data('plan');
+			$houseTrigger.removeClass('active');
+			$(this).addClass('active');
+			$housePlans.hide();
+			$housePlans.filter('[data-plan="' + plan + '"]').fadeIn(400);
+		});
+	};
+
 	$('.objects-list').objectTabs();
+	$('.section-houses-proj').housePlans();
 
 	var s = skrollr.init({
 		forceHeight: false,
@@ -173,6 +189,9 @@ var App = (function(){
 
 	//Form elements init
 	$('.checkbox').button();
+	$("input[type=file]").nicefileinput({
+		label : 'Выберите файл'
+	});
 
 	//Mask for phone
 	$('.phone-input').inputmask("mask", {"mask": "[+7] (999) 999-9999", showMaskOnHover: false});
@@ -203,6 +222,44 @@ var App = (function(){
 		messages: {
 			phone: 'Обязательное поле',
 			name: 'Обязательное поле'
+		}
+	});
+
+	$('.leave-apply-form').validate({
+		errorPlacement: function(error,element) {
+		    return true;
+		},
+		rules: {
+			projname: 'required',
+			address: 'required',
+			email: {
+				required: true,
+				email: true
+			},
+			phone: 'required',
+			site: 'required',
+			rname: 'required',
+			remail: {
+				required: true,
+				email: true
+			},
+			rphone: 'required',
+		},
+		messages: {
+			projname: 'Обязательное поле',
+			address: 'Обязательное поле',
+			email: {
+				required: 'Обязательное поле',
+				email: 'Неверный формат'
+			},
+			phone: 'Обязательное поле',
+			site: 'Обязательное поле',
+			rname: 'Обязательное поле',
+			remail: {
+				required: 'Обязательное поле',
+				email: 'Неверный формат'
+			},
+			rphone: 'Обязательное поле',
 		}
 	});
 

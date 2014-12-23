@@ -77,7 +77,7 @@
 		p {
 			margin: 0 0 24rem / $hfs;
 
-			font-size: 15em / $hfs;
+			font-size: 1.05em;
 			line-height: 24em / 15em * 1em;
 		}
 	}
@@ -96,7 +96,7 @@
 			font-size: 18em / $hfs;
 			line-height: 41em / 18em * 1em;
 
-			background: url(../images/textarea.jpg) 78px 0 / 100% 78px;
+			outline: 1px solid #c6cdce;
 
 			resize: none;
 		}
