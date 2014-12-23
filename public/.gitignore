@@ -1,14 +1,11 @@
 /psd
-node_modules
-dist
 .tmp
 .sass-cache
-bower_components
-test/bower_components
-=======
+
 /bower_components
 /psd
 /node_modules
 public/bower_components
 public/psd
 public/node_modules
+public/test

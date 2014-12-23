@@ -2,6 +2,10 @@
 
 /public/static/psd
 /public/uploads
+/public/test/
+.sass-cache
+.tmp
+
 node_modules
 less
 
