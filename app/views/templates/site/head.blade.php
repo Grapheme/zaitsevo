@@ -1,3 +1,8 @@
+<?
+/**
+ * TEMPLATE_IS_NOT_SETTABLE
+ */
+?>
 @section('title')
 {{{ isset($page_title) ? $page_title : Config::get('app.default_page_title') }}}
 @stop
