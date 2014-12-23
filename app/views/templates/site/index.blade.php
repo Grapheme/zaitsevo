@@ -83,7 +83,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 <div id="fish-tip" class="map-mark fish" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
                 <div id="cupbook-tip" class="map-mark cupbook" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
             </div>
-            
+
             <div class="btn-scroll-cont" data-75p-top="opacity: 1; transform: translate(0, 0%)" data-55p-top="transform: translate(0, -100%)" data-15p-top="opacity: 0;">
                 <div class="btn btn--small btn--scroll btn--decorated">
                     <div class="btn--scroll-dec"></div>
@@ -204,238 +204,75 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
         </section>
         <!-- End of getto section -->
 
+        @if (count($specials))
         <!-- House project section -->
         <section id="spec-offering" class="section section-houses-proj">
 
             <div class="section-cont">
 
-                <div class="house-plan" data-plan="1">
+                <?
+                $i = 0;
+                ?>
+                @foreach ($specials as $special)
+                <?
+                ++$i;
+                $lines = explode("\n", $special->special_description);
+                ?>
+                <div class="house-plan" @if($i > 1) style="display: none;" @endif data-plan="{{ $i }}">
                     <h2 class="twig--green">
-                        Каркасный одноэтажный дом<br>
-                        108 м<sup>2</sup> (9*12 м)
+                        {{ $special->name }}
                     </h2>
 
                     <div class="house-pict">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/01.png" alt="">
+                        <img src="{{ $special->special_photo->full() }}" alt="">
                     </div><!--
 
 					 --><div class="house-plan-top">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/01-plan.png" alt="">
+                        <img src="{{ $special->special_plan->full() }}" alt="">
                     </div>
 
+                    @if (count($lines))
                     <ul class="house-props">
-
-                        <li class="house-props-item">
-                            820 тыс. рублей за базовую комплектацию
-                        </li><!--
-
-						 --><li class="house-props-item">
-                            Строительно-монтажные работы, материалы и доставка
-                            на объект включены в стоимость.
-                        </li>
+                        <!--
+                        @foreach ($lines as $line)
+                            --><li class="house-props-item">
+                                {{ $line }}
+                            </li><!--
+                        @endforeach
+                        -->
                     </ul>
+                    @endif
                 </div>
-                <div class="house-plan" style="display: none;" data-plan="2">
-                    <h2 class="twig--green">
-                        Каркасный одноэтажный дом<br>
-                        63 м<sup>2</sup> (7*9 м)
-                    </h2>
+                @endforeach
 
-                    <div class="house-pict">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/02.png" alt="">
-                    </div><!--
 
-					 --><div class="house-plan-top">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/02-plan.png" alt="">
-                    </div>
-
-                    <ul class="house-props">
-
-                        <li class="house-props-item">
-                            600 тыс. рублей за базовую комплектацию
-                        </li><!--
-
-						--><li class="house-props-item">
-                            Строительно-монтажные работы, материалы и доставка
-                            на объект включены в стоимость.
-                        </li>
-                    </ul>
-                </div>
-                <div class="house-plan" style="display: none;" data-plan="3">
-                    <h2 class="twig--green">
-                        Каркасный одноэтажный дом<br>
-                        78 м<sup>2</sup> (7,5*10,5 м)
-                    </h2>
-
-                    <div class="house-pict">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/03.png" alt="">
-                    </div><!--
-
-					 --><div class="house-plan-top">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/03-plan.png" alt="">
-                    </div>
-
-                    <ul class="house-props">
-
-                        <li class="house-props-item">
-                            670 тыс. рублей за базовую комплектацию
-                        </li><!--
-
-						 --><li class="house-props-item">
-                            Строительно-монтажные работы, материалы и доставка
-                            на объект включены в стоимость.
-                        </li>
-                    </ul>
-                </div>
-                <div class="house-plan" style="display: none;" data-plan="4">
-                    <h2 class="twig--green">
-                        Каркасный одноэтажный дом<br>
-                        90 м<sup>2</sup> (7,5*12 м)
-                    </h2>
-
-                    <div class="house-pict">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/04.png" alt="">
-                    </div><!--
-
-					 --><div class="house-plan-top">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/04-plan.png" alt="">
-                    </div>
-
-                    <ul class="house-props">
-
-                        <li class="house-props-item">
-                            740 тыс. рублей за базовую комплектацию
-                        </li><!--
-
-						 --><li class="house-props-item">
-                            Строительно-монтажные работы, материалы и доставка
-                            на объект включены в стоимость.
-                        </li>
-                    </ul>
-                </div>
-                <div class="house-plan" style="display: none;" data-plan="5">
-                    <h2 class="twig--green">
-                        Каркасный одноэтажный<br>
-                        дом 72 м<sup>2</sup> (8*9 м)
-                    </h2>
-
-                    <div class="house-pict">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/05.png" alt="">
-                    </div><!--
-
-					 --><div class="house-plan-top">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/05-plan.png" alt="">
-                    </div>
-
-                    <ul class="house-props">
-
-                        <li class="house-props-item">
-                            620 тыс. рублей за базовую комплектацию
-                        </li><!--
-
-						 --><li class="house-props-item">
-                            Строительно-монтажные работы, материалы и доставка
-                            на объект включены в стоимость.
-                        </li>
-                    </ul>
-                </div>
-                <div class="house-plan" style="display: none;" data-plan="6">
-                    <h2 class="twig--green">
-                        Каркасный одноэтажный дом<br>
-                        82,8 м<sup>2</sup> (9*9,2 м)
-                    </h2>
-
-                    <div class="house-pict">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/06.png" alt="">
-                    </div><!--
-
-					 --><div class="house-plan-top">
-                        <img src="{{ Config::get('site.theme_path') }}/images/plans/06-plan.png" alt="">
-                    </div>
-
-                    <ul class="house-props">
-
-                        <li class="house-props-item">
-                            670 тыс. рублей за базовую комплектацию
-                        </li><!--
-
-						 --><li class="house-props-item">
-                            Строительно-монтажные работы, материалы и доставка
-                            на объект включены в стоимость.
-                        </li>
-                    </ul>
-                </div>
             </div>
             <ul class="houses-list">
 
-                <li class="houses-item active" data-plan="1">
-                    <div class="houses-item-cover" style="background-image: url({{ Config::get('site.theme_path') }}/images/plans/01.png)">
-
-                    </div>
-                    <div class="houses-item-desc">
+                <!--
+                <?
+                $i = 0;
+                ?>
+                @foreach ($specials as $special)
+                <?
+                ++$i;
+                ?>
+                    --><li class="houses-item @if($i == 1) active @endif" data-plan="{{ $i }}">
+                        <div class="houses-item-cover" style="background-image: url({{ $special->special_photo->full() }})">
+                        </div>
+                        <div class="houses-item-desc">
 							<span>
-								Каркасный одноэтажный дом 108 м<sup>2</sup>
+								{{ $special->name }}
 							</span>
-                    </div>
-                </li><!--
+                        </div>
+                    </li><!--
+                @endforeach
+                -->
 
-				 --><li class="houses-item" data-plan="2">
-                    <div class="houses-item-cover" style="background-image: url({{ Config::get('site.theme_path') }}/images/plans/02.png)">
-
-                    </div>
-                    <div class="houses-item-desc">
-							<span>
-								Каркасный одноэтажный дом 63 м<sup>2</sup>
-							</span>
-                    </div>
-                </li><!--
-
-				 --><li class="houses-item" data-plan="3">
-                    <div class="houses-item-cover" style="background-image: url({{ Config::get('site.theme_path') }}/images/plans/03.png)">
-
-                    </div>
-                    <div class="houses-item-desc">
-							<span>
-								Каркасный одноэтажный дом 78 м<sup>2</sup>
-							</span>
-                    </div>
-                </li><!--
-
-				 --><li class="houses-item" data-plan="4">
-                    <div class="houses-item-cover" style="background-image: url({{ Config::get('site.theme_path') }}/images/plans/04.png)">
-
-                    </div>
-                    <div class="houses-item-desc">
-							<span>
-								Каркасный одноэтажный дом 90 м<sup>2</sup>
-							</span>
-                    </div>
-                </li><!--
-
-				 --><li class="houses-item" data-plan="5">
-                    <div class="houses-item-cover" style="background-image: url({{ Config::get('site.theme_path') }}/images/plans/05.png)">
-
-                    </div>
-                    <div class="houses-item-desc">
-							<span>
-								Каркасный одноэтажный дом 72 м<sup>2</sup>
-							</span>
-                    </div>
-                </li><!--
-
-					--><li class="houses-item" data-plan="6">
-                    <div class="houses-item-cover" style="background-image: url({{ Config::get('site.theme_path') }}/images/plans/06.png)">
-
-                    </div>
-                    <div class="houses-item-desc">
-							<span>
-								Каркасный одноэтажный дом 82,8 м<sup>2</sup>
-							</span>
-                    </div>
-                </li>
             </ul>
         </section>
         <!-- End of house project section -->
+        @endif
 
         <!-- Footer form section -->
         <section class="section section-footer-form">
