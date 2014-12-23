@@ -103,7 +103,13 @@ var App = (function(){
 			map: parseInt( $('.section-map').offset().top ),
 			mapend: parseInt( $('.section-map').offset().top + $('.section-map').height() ),
 			ffooter: parseInt( $('.section-footer-form').offset().top ),
-			ffooterend: parseInt( $('.section-footer-form').offset().top + $('.section-map').height() )
+			ffooterend: parseInt( $('.section-footer-form').offset().top + $('.section-map').height() ),
+			//sections
+			main: parseInt( $('.section-main').offset().top ),
+			about: parseInt( $('.section-about').offset().top ),
+		    objects: parseInt( $('.section-objects').offset().top ),
+		    areas: parseInt( $('.section-areas').offset().top ),
+		    houses: parseInt( $('.section-houses-proj').offset().top )
 		}
 	});
 
