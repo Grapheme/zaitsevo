@@ -1,3 +1,8 @@
+<?
+/**
+ * MENU_PLACEMENTS: main_menu=Основное меню
+ */
+?>
 @if (@is_object($page->meta->seo))
 @section('title'){{ $page->meta->seo->title ? $page->meta->seo->title : $page->name }}@stop
 @section('description'){{ $page->meta->seo->description }}@stop

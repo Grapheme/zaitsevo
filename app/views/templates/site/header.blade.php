@@ -16,22 +16,8 @@
     </div>
 
     <nav role="navigation">
-        <ul class="nav-list">
-            <li class="nav-list-item">
-                <a href="#about" data-anchor-target="#about" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">О поселке</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="#map" data-anchor-target="#map" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Карта</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="#infrastructure" data-anchor-target="#infrastructure" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Инфраструктура</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="#areas" data-anchor-target="#areas" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Участки</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="#spec-offering" data-anchor-target="#spec-offering" data-bottom-top="@class:inactive" data-50-top="@class:active" data-50-top-bottom="@class:inactive">Спецпредложения</a>
-            </li>
-        </ul>
+
+        {{ Menu::placement('main_menu') }}
+
     </nav>
 </header>

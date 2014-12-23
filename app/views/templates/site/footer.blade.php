@@ -41,7 +41,7 @@
     <div class="popup order-call" data-popup="order-call">
         <div class="popup-logo"></div>
 
-        <form class="order-call-form">
+        <form action="{{ URL::route('ajax.request-call') }}" method="POST" class="order-call-form">
 
             <fieldset>
                 <input name="name" type="text" placeholder="Имя *">
@@ -52,9 +52,7 @@
             </fieldset>
 
             <fieldset>
-						<textarea name="text" placeholder="Комментарий">
-
-						</textarea>
+                <textarea name="text" placeholder="Комментарий"></textarea>
             </fieldset>
 
             <div class="order-call-hint">
@@ -68,7 +66,7 @@
     </div>
     <div class="popup leave-apply" data-popup="leave-apply">
         <div class="popup-logo"></div>
-        <form class="leave-apply-form clearfix">
+        <form action="{{ URL::route('ajax.architects-competition') }}" method="POST" class="leave-apply-form clearfix">
 
             <div class="clearfix">
                 <div class="column column-half">

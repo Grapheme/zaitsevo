@@ -317,7 +317,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
                     <div class="section-form-body">
 
-                        <form id="feedback-form" class="feedback-form" action="" method="post" novalidate="novalidate">
+                        <form action="{{ URL::route('ajax.send-message') }}" method="POST" id="feedback-form" class="feedback-form" novalidate="novalidate">
 
                             <fieldset>
 
