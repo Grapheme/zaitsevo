@@ -16,7 +16,7 @@ $specials = Dic::valuesBySlug('specials', function($query){
 });
 $specials = DicVal::extracts($specials, null, true);
 $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
-Helper::tad($specials);
+#Helper::tad($specials);
 ?>
 @extends(Helper::layout())
 
@@ -78,12 +78,12 @@ Helper::tad($specials);
                 <div id="theater-tip" class="map-mark theater" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
                 <div id="barbecue-tip" class="map-mark barbecue" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-55p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
                 <div id="golf-tip" class="map-mark golf" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="farm-tip" class="map-mark farm" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="kindergarden-tip" class="map-mark kindergarden" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="fishing-tip" class="map-mark fishing" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="cafe-tip" class="map-mark cafe" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
+                <div id="cowcow-tip" class="map-mark cowcow" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
+                <div id="nipple-tip" class="map-mark nipple" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
+                <div id="fish-tip" class="map-mark fish" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
+                <div id="cupbook-tip" class="map-mark cupbook" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
             </div>
-
+            
             <div class="btn-scroll-cont" data-75p-top="opacity: 1; transform: translate(0, 0%)" data-55p-top="transform: translate(0, -100%)" data-15p-top="opacity: 0;">
                 <div class="btn btn--small btn--scroll btn--decorated">
                     <div class="btn--scroll-dec"></div>
@@ -104,6 +104,7 @@ Helper::tad($specials);
         </section>
         <!-- End of getto section -->
 
+        @if (count($objects))
         <!-- Objects section -->
         <section id="infrastructure" class="section section-objects">
 
@@ -170,6 +171,7 @@ Helper::tad($specials);
             </div>
         </section>
         <!-- End of objects section -->
+        @endif
 
         <!-- Areas section -->
         <section id="areas" class="section section-areas">
@@ -519,4 +521,29 @@ Helper::tad($specials);
 
 
 @section('scripts')
+
+    @if (count($objects))
+    <script>
+        //tooltips init
+        $(function(){
+
+            @foreach ($objects as $object)
+            <?
+            $text = explode("\n", $object->map_description);
+            ?>
+            $('#{{ $object->slug }}-tip').tooltipster({
+                trigger: 'click',
+                theme: 'main-tooltips',
+                maxWidth: 262,
+                content: $('<div class="tooltip-head"><div class="icon icon-{{ $object->slug }}"></div><h3>{{ $object->name }}</h3></div> \
+                    <div class="tooltip-body"> \
+                        <p>{{ implode('</p><p>', $text) }}</p> \
+                    </div>')
+            });
+            @endforeach
+
+        });
+    </script>
+    @endif
+
 @stop
