@@ -1,0 +1,107 @@
+.main-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 120rem / $hfs;
+
+	padding: 0 65rem / $hfs;
+
+	font: 1.05em 'osnova_pro', sans-serif;
+
+	background: url(../images/footer.png) repeat-x 0 top;
+
+	.footer-houses {
+		position: absolute;
+		top: -3rem;
+		left: 50%;
+
+		max-width: 1140rem / $hfs;
+		width: 100%;
+		height: 120%;
+		margin-left: -25%;
+
+		background: url(../images/footers/main-footer.png);
+		background-size: 97% auto;
+		background-position: center 0;
+	}
+
+	.footer-cont {
+		position: absolute;
+		left: .5rem;
+		right: .5rem;
+		bottom: 21rem / $hfs;
+
+		height: 60rem / $hfs;	
+
+		background: url(../images/footer-texture.png);
+	}
+
+	.copy {
+		float: left;
+		margin-left: 65rem / $hfs;
+		line-height: 76rem / $hfs;
+	}
+
+	.social {
+		float: left;
+
+		.social-list {
+			@extend .list-unstyled;
+			margin: 0 0 0 192rem / $hfs;
+		}		
+		
+		.social-item {
+			display: inline-block;
+			line-height: 76rem / $hfs;
+
+			a {
+				transition: all .4s ease;
+				font-size: 2em;
+				text-decoration: none;
+				color: $clr-black-green;
+
+				&:hover {
+					color: lighten($clr-black-green, 20%);
+				}
+			}
+
+			.icon-instagram {
+				font-size: 1.1em;
+			}
+		}
+	}
+
+	.dev {
+		float: right;
+		margin-right: 65rem / $hfs;
+		line-height: 76rem / $hfs;
+
+		a {
+			position: relative;
+			color: inherit;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:after {
+				transition: all .4s ease;
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+
+				width: 0;
+				border-bottom: 1px solid;
+			}
+
+			&:hover {
+				
+				&:after {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+}

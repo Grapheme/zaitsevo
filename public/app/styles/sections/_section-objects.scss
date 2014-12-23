@@ -1,0 +1,146 @@
+.section-objects {
+	position: relative;
+	padding: 241rem / $hfs 0 7.5rem;
+	background: url(../images/texture.jpg);
+
+	.section-cont {
+		max-width: 1140rem / $hfs;
+		margin: 0 auto;
+	}
+
+	.objects-list {
+		position: relative;
+		@extend .list-unstyled;
+	}
+
+	.objects-item {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 23%;
+		height: 267rem / $hfs;
+
+		margin: 0 2.666666% 2.666666% 0;
+
+		background: #fff;
+
+		cursor: pointer;
+
+		&.last {
+			margin-bottom: 0;
+		}
+
+		&:nth-child(4n+4) {
+			margin: 0;
+		}
+
+		.icon {
+			position: absolute;
+			top: 50%;
+			right: 62%;
+			margin: -0.5em 0 0;
+
+			font-size: 2.5em;
+			color: #348540;
+		}
+	}
+
+	.objects-item-head {
+		display: table;
+		height: 100%;
+		padding: 0 42rem / $hfs 0 114rem / $hfs;
+
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+
+			font-family: 'room', sans-serif;
+			font-weight: 600;
+			font-size: 22em / $hfs;
+			text-transform: uppercase;
+
+			margin: 0;			
+		}
+	}
+
+	.obj-tabs {
+		position: absolute;
+		top: 0;
+		left: 25.6667%;
+
+		width: 48.6667%;
+		height: 100%;
+		padding: 0 39rem / $hfs;
+
+		background: #fff;
+
+		.obj-tabs-nav {
+			position: absolute;
+			bottom: 52rem / $hfs;
+			right: 39rem / $hfs;
+
+			.icon {
+				cursor: pointer;
+				font-size: 2em;
+				color: #959b97;
+
+				&:hover {
+					color: $clr-green;
+				}
+			}
+		}
+	}
+
+	.obj-tab-item {
+		height: 100%;
+	}
+
+	.obj-tab-head {
+		position: relative;
+		display: table;
+		width: 100%;
+		height: 166rem / $hfs;
+		margin: 0 0 36rem / $hfs;
+		padding: 0 0 0 71rem / $hfs;
+
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+
+			font-family: 'room', sans-serif;
+			font-weight: 600;
+			font-size: 22em / $hfs;
+			text-transform: uppercase;
+
+			margin: 0;
+		}
+
+		.obj-tab-icon {
+			position: absolute;
+			top: 50%;
+			left: 6rem / $hfs;
+			margin: -0.5em 0 0;
+
+			font-size: 2.5em;
+			color: #348540;
+		}
+
+		.obj-cross-icon {
+			position: absolute;
+			top: 71rem / $hfs;
+			right: 0;
+
+			font-size: 2em;
+
+			cursor: pointer;
+		}
+	}
+
+	.obj-tab-body {
+		p {
+			margin-top: 0;
+			font-size: 1.05em;
+			line-height: 24em / 15em * 1em;
+		}
+	}
+}
