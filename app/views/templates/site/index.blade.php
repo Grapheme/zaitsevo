@@ -10,6 +10,13 @@ $objects = Dic::valuesBySlug('infrastructure', function($query){
 });
 $objects = DicVal::extracts($objects, null, true);
 #Helper::tad($objects);
+
+$specials = Dic::valuesBySlug('specials', function($query){
+    $query->orderBy('lft', 'ASC');
+});
+$specials = DicVal::extracts($specials, null, true);
+$specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
+Helper::tad($specials);
 ?>
 @extends(Helper::layout())
 

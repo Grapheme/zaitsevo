@@ -464,7 +464,7 @@ class AdminGalleriesController extends BaseController {
 		$id = (int)Input::get('id');
         if ($id)
             $model = Photo::find($id);
-        if (!is_null($model))
+        if (isset($model) && !is_null($model))
 		    $db_delete = $model->delete();
 
 		if(@$db_delete) {
