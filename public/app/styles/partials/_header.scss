@@ -21,8 +21,31 @@
 		left: 50%;
 		margin: 0 0 0 -89rem / $hfs;
 
-		background: url(../images/logo.png) no-repeat 0 0;
+		background: url(../images/logo.png) no-repeat center center;
 		background-size: 100% 100%;
+
+		&.active {
+			background-image: none;
+		}
+
+		&:before {
+			content: '';
+			opacity: 1;
+			position: absolute;
+			top: 0;
+			left: 43%;
+
+			width: 58rem / $hfs;
+			height: 47rem / $hfs;
+			margin-left: - 23.5rem / $hfs;
+
+			background: url(../images/logo-small.png) no-repeat 0 0;
+			background-size: 100% 100%;
+		}
+	}
+
+	.order-a-call {
+		transition: none;
 	}
 
 	.contacts {
@@ -55,7 +78,11 @@
 }
 
 nav {
-	float: right;
+	position: absolute;
+	top: 50%;
+	right: 56rem / $hfs;
+
+	margin-top: -23.5em / $hfs
 }
 
 .nav-list {

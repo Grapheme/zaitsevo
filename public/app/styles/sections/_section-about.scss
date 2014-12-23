@@ -80,16 +80,13 @@
 
 			text-transform: uppercase;
 		}
-	}
+	}		
 
-	.adv-item-body {	
+	p {
+		margin: 0 0 24rem / $hfs;
 
-		p {
-			margin: 0 0 24rem / $hfs;
-
-			font-size: 1.05em;
-			line-height: 24em / 15em * 1em;
-		}
+		font-size: 1.05em;
+		line-height: 24em / 15em * 1em;
 	}
 
 	.adv-item-links {
