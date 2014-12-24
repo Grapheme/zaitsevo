@@ -6,19 +6,19 @@
 <body>
 	<div>
 		<p>
-            Сообщение от &lt;{{ $email }}&gt;
+            Заказан обратный звонок на номер {{ $phone }}
+    		@if ($name)
+    			({{ $name }})
+    		@endif
 		</p>
 		@if ($phone)
 		<p>
-			Телефон: {{ $phone }}
-		</p>
-		@endif
-		<p>
-			Текст сообщения:
+			Комментарий:
 		</p>
 		<p>
 			{{ Helper::nl2br($text) }}
 		</p>
+		@endif
 	</div>
 </body>
 </html>

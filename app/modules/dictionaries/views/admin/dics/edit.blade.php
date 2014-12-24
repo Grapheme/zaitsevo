@@ -136,7 +136,7 @@
                     <section>
                         <label class="label">Кто может видеть этот словарь:</label>
                         <label class="radio">
-                            {{ Form::radio('view_access', 0, $element->id ? NULL : true) }}
+                            {{ Form::radio('view_access', '0', $element->view_access === 0 ?: ($element->id ? NULL : true)) }}
                             <i></i> Все, у кого есть доступ к словарям
                         </label>
                         <label class="radio">

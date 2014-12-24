@@ -321,7 +321,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
                             <fieldset>
 
-                                <textarea></textarea>
+                                <textarea name="text"></textarea>
                             </fieldset>
                             <fieldset>
 
