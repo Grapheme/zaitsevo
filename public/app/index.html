@@ -31,7 +31,8 @@
 		  js = d.createElement(s); js.id = id;
 		  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
 		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+		}(document, 'script', 'facebook-jssdk'));  
+		</script>
 		<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -818,7 +819,11 @@
 								Обратный звонок
 							</button>
 
-							<div class="fb-like-box" data-href="https://www.facebook.com/zaitsevo" data-width="300" data-height="217" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+							<div id="fbcontainer" style="width: 60%; height: 100px;"></div>
+
+							<div id="instafeed" style="width: 40%; height: 100px;">
+								
+							</div>
 							
 						</div>
 
@@ -1055,12 +1060,21 @@
 		<script src="../bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js"></script>
 		<script src="../bower_components/skrollr-menu/dist/skrollr.menu.min.js"></script>
 		<script src="../bower_components/nicefileinput/jquery.nicefileinput.min.js"></script>
+		<script src="../bower_components/instafeed.js/instafeed.min.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 
 				<!-- build:js scripts/main.js -->
 				<script src="scripts/main.js"></script>
 				<script>
+					$(window).bind("load resize", function(){    
+					  var container_width = $('#fbcontainer').width();
+					    $('#fbcontainer').html('<div class="fb-like-box" data-href="https://www.facebook.com/zaitsevo"' +
+					      'data-width="' + container_width + '" data-height="217" data-colorscheme="light"' + 
+					      'data-show-faces="true"' +
+					      'data-header="false" data-stream="false" data-show-border="true"></div>');
+					      FB.XFBML.parse( );			      
+						}); 
 					//tooltips init
 					$(function(){
 						$('#stadium-tip').tooltipster({
