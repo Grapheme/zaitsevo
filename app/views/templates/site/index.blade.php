@@ -361,6 +361,16 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
     @if (count($objects))
     <script>
+        //facebook resizing
+        $(window).bind("load resize", function(){    
+          var container_width = $('#fbcontainer').width();
+            $('#fbcontainer').html('<div class="fb-like-box" data-href="https://www.facebook.com/zaitsevo"' +
+              'data-width="' + container_width + '" data-height="217" data-colorscheme="light"' + 
+              'data-show-faces="true"' +
+              'data-header="false" data-stream="false" data-show-border="true"></div>');
+              FB.XFBML.parse( );                  
+        });
+
         //tooltips init
         $(function(){
 
