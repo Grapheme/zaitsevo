@@ -76,9 +76,9 @@
                         <h3>Номинация</h3>
 
                         <div class="checkbox-cont">
-                            <input type="checkbox" id="check-1" name="ecohouse" class="checkbox"><label for="check-1" class="checkbox-label">Эко-дом</label>
+                            <input type="checkbox" id="check-1" name="nomination[ecohouse]" value="1" class="checkbox"><label for="check-1" class="checkbox-label">Эко-дом</label>
 
-                            <input type="checkbox" id="check-2" name="landscape" class="checkbox"><label for="check-2" class="checkbox-label">Ландшафтная архитектура</label>
+                            <input type="checkbox" id="check-2" name="nomination[landscape]" value="1" class="checkbox"><label for="check-2" class="checkbox-label">Ландшафтная архитектура</label>
                         </div>
 
                         <input class="input" type="text" name="projname" placeholder="Название проекта *">
@@ -124,13 +124,13 @@
 
                         <h3>Прикрепите изображения</h3>
 
-                        <input type="file" multiple>
+                        <input type="file" name="file">
 
                         <p>
-                            Графические файлы к проекту в формате JPEG, размером не менее 3500х2500, включающие: 3d-визуализации, поэтажные планы (не менее двух разрезов), фасады.
+                            Архив (zip, rar, 7z), содержащий графические файлы к проекту в формате JPEG, размером не менее 3500х2500, включающие: 3d-визуализации, поэтажные планы (не менее двух разрезов), фасады.
                         </p>
                         <p>
-                            * - поля, отмеченные звездочкой обязательны для заполнения
+                            * - поля, отмеченные звездочкой, обязательны для заполнения
                         </p>
 
                     </fieldset>
