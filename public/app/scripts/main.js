@@ -14,6 +14,14 @@ var App = (function(){
 		});
 	});
 
+	//instafeed init
+	// var feed = new Instafeed({
+	// 	get: 'user',
+	// 	userId: 1521928118,
+	// 	clientId: 'a541556dc1cc4a6ab63d72498e28801f',
+ //    });
+ //    feed.run();
+
 	//Objects plugin
 	jQuery.fn.objectTabs = function() {
 		var element = $(this),
