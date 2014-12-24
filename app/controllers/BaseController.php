@@ -84,6 +84,8 @@ class BaseController extends Controller {
             #Helper::d($tmp);
             $properties = Helper::getFileProperties($tmp);
             #var_dump($properties);
+            #Helper::d($tmp);
+            #Helper::d($properties);
             #echo (int)(in_array('TEMPLATE_IS_NOT_SETTABLE', $properties));
             #echo "<hr/>";
             if (

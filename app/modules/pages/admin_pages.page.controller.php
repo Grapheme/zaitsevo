@@ -191,6 +191,9 @@ class AdminPagesPageController extends BaseController {
             if (@$templates_theme[$element->template])
                 $template_exists = true;
 
+            #die;
+            #Helper::dd($templates_theme);
+
             natsort($templates_theme);
             $templates['Тема оформления'] = $templates_theme;
         }
