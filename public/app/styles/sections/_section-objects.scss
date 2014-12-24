@@ -26,6 +26,13 @@
 
 		cursor: pointer;
 
+		&:hover {
+
+			.icon {
+				color: $clr-light-brown;
+			}
+		}
+
 		&.last {
 			margin-bottom: 0;
 		}
@@ -38,6 +45,7 @@
 		}
 
 		.icon {
+			transition: color .4s ease;
 			position: absolute;
 			top: 50%;
 			right: 62%;

@@ -126,73 +126,6 @@ var App = (function(){
 	//Mask for phone
 	$('.phone-input').inputmask("mask", {"mask": "[+7] (999) 999-9999", showMaskOnHover: false});
 
-	// Validation
-	$('#feedback-form').validate({
-		rules: {
-			phone: 'required',
-			email: {
-				required: true,
-				email: true
-			}
-		},
-		messages: {
-			phone: 'Обязательное поле',
-			email: {
-				required: 'Обязательное поле',
-				email: 'Неверный формат'
-			}
-		}
-	});
-
-	$('.order-call-form').validate({
-		rules: {
-			phone: 'required',
-			name: 'required'
-		},
-		messages: {
-			phone: 'Обязательное поле',
-			name: 'Обязательное поле'
-		}
-	});
-
-	$('.leave-apply-form').validate({
-		errorPlacement: function(error,element) {
-		    return true;
-		},
-		rules: {
-			projname: 'required',
-			address: 'required',
-			email: {
-				required: true,
-				email: true
-			},
-			phone: 'required',
-			site: 'required',
-			rname: 'required',
-			remail: {
-				required: true,
-				email: true
-			},
-			rphone: 'required',
-		},
-		messages: {
-			projname: 'Обязательное поле',
-			address: 'Обязательное поле',
-			email: {
-				required: 'Обязательное поле',
-				email: 'Неверный формат'
-			},
-			phone: 'Обязательное поле',
-			site: 'Обязательное поле',
-			rname: 'Обязательное поле',
-			remail: {
-				required: 'Обязательное поле',
-				email: 'Неверный формат'
-			},
-			rphone: 'Обязательное поле',
-		}
-	});
-
 })();
 
 // Popup module
@@ -221,27 +154,43 @@ var Popup = (function(){
 
 	$orderBtn.click( function(e){
 		e.preventDefault();
-		Popup.show('order-call');
+		Popup.show('order-call', $(this));
 	});
 
 	$competBtn.click( function(e){
 		e.preventDefault();
-		Popup.show('leave-apply');
+		Popup.show('leave-apply', $(this));
 	});
 
 	return {
 
-		show: function(id){
-			$overlay.fadeIn( 400 );
+		show: function(id, elem){
+			var elemY1 = elem.offset().top - $(window).scrollTop();
+			var elemX1 = elem.offset().left;
+			var elemY2 = $(window).height() - (elemY1 + elem.height());
+			var elemX2 = $(window).width() - (elemX1 + elem.outerWidth());
+
+			$overlay.css({ display: 'block', top: elemY1, left: elemX1, right: elemX2, bottom: elemY2, opacity: '1'  });
+
+			$overlay.fadeIn( 300 ).css({ top: '0', left: '0', right: '0', bottom: '0'  });
 			$popup.removeClass('active');
-			$('[data-popup="' + id + '"]').addClass('active');
+
+			setTimeout( function(){
+				$('[data-popup="' + id + '"]').fadeIn( 400 );
+			}, 400);
+			
 
 			$html.css({ overflow: 'hidden' });
 		},
 
 		close: function(){
-			$overlay.fadeOut( 400 );
-			$popup.removeClass('active');
+			$overlay.css({ opacity: '0' });
+
+			setTimeout( function(){
+				$overlay.fadeOut();
+			}, 400);
+
+			$popup.removeClass('active').hide();
 
 			$html.removeAttr('style');
 		}

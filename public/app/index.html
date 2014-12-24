@@ -882,7 +882,7 @@
 				<div class="block-2 store" data-_objects--25p="opacity: 0;" data-_objects--20p="opacity: 1;" ></div>
 				<div class="block-2 right-big" data-_areas--35p="opacity: 0;" data-_areas--30p="opacity: 1;"></div>
 				<div class="block-2 right-small" data-_areas--45p="opacity: 0;" data-_areas--40p="opacity: 1;"></div>
-				<div class="block-3 center-home" data-300-end="opacity: 0;" data-100-end="opacity: 1;"></div>
+				<div class="block-3 center-home" data-_houses--40p="opacity: 0;" data-_houses--30p="opacity: 1;"></div>
 				<div class="block-3 horse" data-_houses--25p="opacity: 0;" data-_houses--20p="opacity: 1;"></div>
 				<div class="block-3 little-horse" data-_houses--15p="opacity: 0;" data-_houses--10p="opacity: 1;"></div>
 			</div>
@@ -1134,6 +1134,76 @@
 										<div class="tooltip-body"> \
 											<p>В уютном кафе за любимой книгой из небольшой библиотеки можно насладиться ароматным кофе и чаем и попробовать вкуснейшую домашнюю выпечку. </p> \
 										</div>')
+						});
+					});
+
+					//validation
+					$(function(){
+						// Validation
+						$('#feedback-form').validate({
+							rules: {
+								phone: 'required',
+								email: {
+									required: true,
+									email: true
+								}
+							},
+							messages: {
+								phone: 'Обязательное поле',
+								email: {
+									required: 'Обязательное поле',
+									email: 'Неверный формат'
+								}
+							}
+						});
+
+						$('.order-call-form').validate({
+							rules: {
+								phone: 'required',
+								name: 'required'
+							},
+							messages: {
+								phone: 'Обязательное поле',
+								name: 'Обязательное поле'
+							}
+						});
+
+						$('.leave-apply-form').validate({
+							errorPlacement: function(error,element) {
+							    return true;
+							},
+							rules: {
+								projname: 'required',
+								address: 'required',
+								email: {
+									required: true,
+									email: true
+								},
+								phone: 'required',
+								site: 'required',
+								rname: 'required',
+								remail: {
+									required: true,
+									email: true
+								},
+								rphone: 'required',
+							},
+							messages: {
+								projname: 'Обязательное поле',
+								address: 'Обязательное поле',
+								email: {
+									required: 'Обязательное поле',
+									email: 'Неверный формат'
+								},
+								phone: 'Обязательное поле',
+								site: 'Обязательное поле',
+								rname: 'Обязательное поле',
+								remail: {
+									required: 'Обязательное поле',
+									email: 'Неверный формат'
+								},
+								rphone: 'Обязательное поле',
+							}
 						});
 					});
 				</script>
