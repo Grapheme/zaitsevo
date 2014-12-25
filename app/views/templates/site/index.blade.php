@@ -384,6 +384,9 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                     </div>')
             });
             @endforeach
+            $(window).scroll( function(){
+                $('.map-mark').tooltipster('hide');
+            }); 
 
         });
     </script>
