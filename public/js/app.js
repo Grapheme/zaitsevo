@@ -1,14 +1,5 @@
 //validation
 $(function(){
-    $(window).bind("load resize", function(){
-      var container_height = $('.section-form-half.feedback').height() - $('.section-form-half.callback').height() - 31;   
-      var container_width = $('#fbcontainer').width();
-        $('#fbcontainer').html('<div class="fb-like-box" data-href="https://www.facebook.com/zaitsevo"' +
-          'data-width="' + container_width + '" data-height="' + container_height + '" data-colorscheme="light"' + 
-          'data-show-faces="true"' +
-          'data-header="false" data-stream="false" data-show-border="true"></div>');
-          FB.XFBML.parse( );                  
-        });
     
     // Validation
     $('#feedback-form').validate({
