@@ -74,14 +74,16 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
             <img src="{{ Config::get('site.theme_path') }}/images/map.jpg" alt="" data-75p-top="transform: translate(0, 5%)" data-35p-top="transform: translate(0,0)">
 
             <div class="map-marks">
-                <div id="stadium-tip" class="map-mark stadium" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="theater-tip" class="map-mark theater" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="barbecue-tip" class="map-mark barbecue" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-55p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="golf-tip" class="map-mark golf" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="cowcow-tip" class="map-mark cowcow" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="nipple-tip" class="map-mark nipple" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="fish-tip" class="map-mark fish" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
-                <div id="cupbook-tip" class="map-mark cupbook" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1"></div>
+
+                @if (count($objects))
+                    @foreach ($objects as $object)
+                        <?
+                        if (!$object->show_on_the_map)
+                            continue;
+                        ?>
+                        <div id="{{ $object->slug }}-tip" class="map-mark {{ $object->slug }}" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1" style="left: {{ $object->map_x }} !important; top: {{ $object->map_y }} !important;"></div>
+                    @endforeach
+                @endif
             </div>
 
             <div class="btn-scroll-cont" data-75p-top="opacity: 1; transform: translate(0, 0%)" data-55p-top="transform: translate(0, -100%)" data-15p-top="opacity: 0;">
@@ -118,6 +120,8 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                     @foreach ($objects as $object)
 
                         <?
+                            if (!$object->show_in_the_list)
+                                continue;
                             $o = 55 - $i;
                         ?>
                         --><div class="objects-item" id="obj-{{ $object->slug }}" data-75p-top="transform: translate(0, 100%) scale(0.8)" data-{{ $o }}p-top="transform: translate(0,0) scale(1)">
@@ -366,6 +370,8 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
             @foreach ($objects as $object)
             <?
+            if (!$object->show_on_the_map)
+                continue;
             $text = explode("\n", $object->map_description);
             ?>
             $('#{{ $object->slug }}-tip').tooltipster({
