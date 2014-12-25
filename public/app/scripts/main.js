@@ -153,6 +153,7 @@ var Popup = (function(){
 	var $orderBtn = $('.js-btn-order');
 	var $competBtn = $('.js-btn-compet');
 	var $html = $('html');
+	var $coords = {};
 
 	$close.click( function(){
 		Popup.close();
@@ -184,6 +185,13 @@ var Popup = (function(){
 			var elemY2 = $(window).height() - (elemY1 + elem.height());
 			var elemX2 = $(window).width() - (elemX1 + elem.outerWidth());
 
+			$coords = {
+				elemX1: elemX1,
+				elemX2: elemX2,
+				elemY1: elemY1,
+				elemY2: elemY2
+			};
+
 			$overlay.css({ display: 'block', top: elemY1, left: elemX1, right: elemX2, bottom: elemY2, opacity: '1'  });
 
 			$overlay.fadeIn( 300 ).css({ top: '0', left: '0', right: '0', bottom: '0'  });
@@ -198,7 +206,7 @@ var Popup = (function(){
 		},
 
 		close: function(){
-			$overlay.css({ opacity: '0' });
+			$overlay.css({ display: 'block', top: $coords.elemY1, left: $coords.elemX1, right: $coords.elemX2, bottom: $coords.elemY2, opacity: '0'});
 
 			setTimeout( function(){
 				$overlay.fadeOut();
