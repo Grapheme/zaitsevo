@@ -81,7 +81,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                         if (!$object->show_on_the_map)
                             continue;
                         ?>
-                        <div id="{{ $object->slug }}-tip" class="map-mark {{ $object->slug }}" data-75p-top="transform: translate(0, 200%) scale(0.8); opacity: 0;" data-60p-top="transform: translate(0,0) scale(1); opacity: 1" style="left: {{ $object->map_x }} !important; top: {{ $object->map_y }} !important;"></div>
+                        <div id="{{ $object->slug }}-tip" class="map-mark {{ $object->slug }}" style="left: {{ $object->map_x }} !important; top: {{ $object->map_y }} !important;"></div>
                     @endforeach
                 @endif
             </div>
