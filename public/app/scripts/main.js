@@ -3,6 +3,20 @@
 var App = (function(){
 	'use strict';
 
+	//VH fallback for section-main
+	$(function(){
+		var $sectMain = $('.section-main');
+		
+		if ( $sectMain.height() == 0 ) {
+			
+			$sectMain.height( $(window).height() );
+
+			$(window).resize( function(){
+				$sectMain.height( $(window).height() );
+			});
+		}
+	})
+
 	//fancybox init
 	$(function(){
 		$('.fancybox').fancybox({

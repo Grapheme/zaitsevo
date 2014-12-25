@@ -30,7 +30,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
     <div class="main-wrapper">
         <!-- Main section -->
-        <section class="section section-main" style="height:700px !important;">
+        <section class="section section-main">
 
             <h1>
                 {{ $page->block('h1') }}
