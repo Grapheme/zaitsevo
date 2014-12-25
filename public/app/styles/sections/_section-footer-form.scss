@@ -112,6 +112,7 @@
 			font-weight: 500;
 
 			&.error {
+				display: none;
 				font-size: 1em;
 			}
 		}
@@ -120,6 +121,10 @@
 			width: 100%;
 			border: none;
 			border-bottom: 1px solid #c6cdce;
+
+			&.error {
+				border-color: orange;
+			}
 		}
 
 		.col {
