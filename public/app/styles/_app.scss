@@ -22,6 +22,10 @@ main {
 	padding: 155rem / $hfs 0 0;
 }
 
+.main-wrapper {
+	min-width: 1200rem / $hfs;
+}
+
 .section {
 
 	.twig--green {
