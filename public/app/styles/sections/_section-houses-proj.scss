@@ -6,6 +6,34 @@
 		text-align: center;
 	}
 
+	.section-houses-wrap {
+		position: relative;
+		margin: 0 auto;
+    	max-width: 71.25rem;
+
+		.icon {
+			transition: all .4s ease;
+			cursor: pointer;
+
+			&:hover {
+				color: $clr-green;
+			}
+
+			&.icon-arrow_left {
+				position: absolute;
+				top: 38%;
+				left: -3rem;
+				font-size: 3rem;
+			}
+			&.icon-arrow_right {
+				position: absolute;
+				top: 38%;
+				right: -3rem;
+				font-size: 3rem;
+			}
+		}
+	}
+
 	.section-h2 {
 		position: relative;
 		display: inline-block;
@@ -134,7 +162,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
+			width: 101%;
 			height: 100%;
 
 			background-repeat: no-repeat;

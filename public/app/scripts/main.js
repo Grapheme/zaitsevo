@@ -107,6 +107,36 @@ var App = (function(){
 		var $housePlans = $elem.find('.house-plan');
 		var $houseTrigger = $elem.find('.houses-item');
 
+		var	nextArrow = $('.js-next-house');
+		var	prevArrow = $('.js-prev-house');
+
+		nextArrow.click( function(){
+			var currentElem = $houseTrigger.filter('.active');
+			var currentIndex = $houseTrigger.filter('.active').index();
+
+			if( currentElem.is(':last-child') ) {
+				currentIndex = $houseTrigger.eq( 0 );
+			} else {
+				currentIndex = $houseTrigger.eq( currentIndex + 1 );
+			}
+
+			currentIndex.trigger('click');
+
+		});
+
+		prevArrow.click( function(){
+			var currentElem = $houseTrigger.filter('.active');
+			var currentIndex = $houseTrigger.filter('.active').index();
+
+			if( currentElem.is(':first-child') ) {
+				currentIndex = $houseTrigger.eq( $houseTrigger.length - 1 );
+			} else {
+				currentIndex = $houseTrigger.eq( currentIndex - 1 );
+			}
+
+			currentIndex.trigger('click');
+		});
+
 		$houseTrigger.click( function(){
 			var plan = $(this).data('plan');
 			$houseTrigger.removeClass('active');

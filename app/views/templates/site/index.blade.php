@@ -97,12 +97,12 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
         <!-- Getto section -->
         <section class="section section-getto section-short">
-            <h2 data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">
+            <h2>
 
                 {{ $page->block('slogan1') }}
 
             </h2>
-            <a href="#" class="btn btn--blue btn--decorated js-btn-order" data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">Заказать звонок</a>
+            <a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
         </section>
         <!-- End of getto section -->
 
@@ -209,12 +209,12 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
         <!-- Getto section -->
         <section class="section section-no-troubles section-short">
-            <h2 data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">
+            <h2>
 
                 {{ $page->block('slogan2') }}
 
             </h2>
-            <a href="#" class="btn btn--blue btn--decorated js-btn-order" data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">Заказать звонок</a>
+            <a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
         </section>
         <!-- End of getto section -->
 
@@ -369,6 +369,24 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 {{ $page->block('slogan3') }}
 
             </h3>
+
+            <div class="contact-info-cont">
+                <div class="contact-info clearfix">
+                    <div class="phones">
+                        <h4>
+                            Отдел продаж:
+                        </h4>
+                        <a href="tel:+7 (863) 311-39-06">+7 (863) 311-39-06</a>,
+                        <a href="tel:+7 (863) 296-32-24">+7 (863) 296-32-24</a>
+                    </div>
+                    <div class="address">
+                        <h4>
+                            Адрес:
+                        </h4>
+                        344029 г. Аксай, ул. Садовая, 8а
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- End of footer form section-->
 

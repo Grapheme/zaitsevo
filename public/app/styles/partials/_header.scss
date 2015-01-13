@@ -61,18 +61,10 @@
 			display: block;
 			color: $clr-black-green;
 			text-decoration: none;
-
-			&:last-child {
-				display: inline-block;
-				font-size: .8em;
-
-				b {
-					font-weight: 400;
-				}
-			}
 		}
 
 		.phones-delim {
+			display: none;
 			font-size: .7em;
 		}
 	}
