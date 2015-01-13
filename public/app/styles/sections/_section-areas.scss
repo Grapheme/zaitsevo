@@ -1,7 +1,41 @@
 .section-areas {
 	position: relative;
-	padding: 7.5rem 0;
+	padding: 0 0 7.5rem 0;
 	background: url(../images/texture.jpg);
+
+	.section-h2-cont {
+		text-align: center;
+	}
+
+	.section-h2 {
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		font-family: 'room';
+		font-size: 46em / $hfs;
+		line-height: 241rem / $hfs;
+
+		&:before {
+		    color: #a78038;
+		    content: "•";
+		    left: -2rem;
+		    position: absolute;
+		    top: 0;
+		    line-height: 241rem / $hfs;
+		    font-size: .6em;
+		    transition: all 0.6s ease 0s;
+		}
+		&:after {
+		    color: #a78038;
+		    content: "•";
+		    position: absolute;
+		    right: -2rem;
+		    top: 0;
+		    line-height: 241rem / $hfs;
+		    font-size: .6em;
+		    transition: all 0.6s ease 0s;
+		}
+	}
 
 	.section-cont {
 		max-width: 1140rem / $hfs;

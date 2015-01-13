@@ -109,6 +109,11 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
         @if (count($objects))
         <!-- Objects section -->
         <section id="infrastructure" class="section section-objects">
+            <div class="section-h2-cont">
+                <h2 class="section-h2">
+                    Инфраструктура
+                </h2>
+            </div>
 
             <div class="section-cont">
                 <div class="objects-list">
@@ -179,6 +184,11 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
         <!-- Areas section -->
         <section id="areas" class="section section-areas">
+            <div class="section-h2-cont">
+                <h2 class="section-h2">
+                    Участки
+                </h2>
+            </div>
 
             <div class="section-cont">
 
@@ -211,6 +221,12 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
         @if (count($specials))
         <!-- House project section -->
         <section id="spec-offering" class="section section-houses-proj">
+
+            <div class="section-h2-cont">
+                <h2 class="section-h2">
+                    Спецпредложения
+                </h2>
+            </div>
 
             <div class="section-cont">
 
