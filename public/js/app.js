@@ -96,6 +96,13 @@ function sendForm(form) {
     options.beforeSubmit = function(formData, jqForm, options){
 
         $(form).find('button').addClass('loading').attr('disabled', 'disabled');
+
+        var i = 0;
+        setInterval(function() {
+            i = ++i % 4;
+            $(form).find('button').html("Отправка"+Array(i+1).join("."));
+        }, 500);
+
         $(form).find('.error-msg').text('');
     }
 
