@@ -149,6 +149,8 @@ var App = (function(){
 	$('.objects-list').objectTabs();
 	$('.section-houses-proj').housePlans();
 
+	var planeFlag = true;
+
 	if( !jQuery.browser.mobile ) {
 		var s = skrollr.init({
 			forceHeight: false,
@@ -163,7 +165,17 @@ var App = (function(){
 			    objects: parseInt( $('.section-objects').offset().top ),
 			    areas: parseInt( $('.section-areas').offset().top ),
 			    houses: parseInt( $('.section-houses-proj').offset().top )
-			}
+			},
+			keyframe: function(element, name, direction) {
+		        $(element).trigger(name, [direction]);
+		    }
+		});
+
+		$('.plane').on('data55pTop', function(e, direction) {
+		    if (direction == 'down' && planeFlag) {
+		    	$('.plane').css({ top: '25%', left: '110%' });
+		    	planeFlag = false;
+		    }
 		});
 
 		//The options (second parameter) are all optional. The values shown are the default values.

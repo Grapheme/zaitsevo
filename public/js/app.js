@@ -101,7 +101,7 @@ function sendForm(form) {
         setInterval(function() {
             i = ++i % 4;
             $(form).find('button').html("Отправка"+Array(i+1).join("."));
-        }, 200);
+        }, 300);
 
         $(form).find('.error-msg').text('');
     }

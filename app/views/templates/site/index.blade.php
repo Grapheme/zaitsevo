@@ -102,6 +102,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 {{ $page->block('slogan1') }}
 
             </h2>
+            <div class="tile-of-light" data-75p-top="left: -110%; transform: skew(-20deg, 0);" data-25p-top="left: 0; transform: skew(0, 0);"></div>
             <a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
         </section>
         <!-- End of getto section -->
