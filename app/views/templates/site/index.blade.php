@@ -381,8 +381,8 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                         <h4>
                             Отдел продаж:
                         </h4>
-                        <a href="tel:+7 (863) 311-39-06">+7 (863) 311-39-06</a>,
-                        <a href="tel:+7 (863) 296-32-24">+7 (863) 296-32-24</a>
+                        <a href="tel:+79525776877">+7 (952) 577-68-77</a>,
+                        <a href="tel:+78632963224">+7 (863) 296-32-24</a>
                     </div>
                     <div class="address">
                         <h4>
