@@ -229,68 +229,72 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 </h2>
             </div>
 
-            <div class="section-cont">
+            <div class="section-houses-wrap">
+                <div class="section-cont">
 
-                <?
-                $i = 0;
-                ?>
-                @foreach ($specials as $special)
-                <?
-                ++$i;
-                $lines = explode("\n", $special->special_description);
-                ?>
-                <div class="house-plan" @if($i > 1) style="display: none;" @endif data-plan="{{ $i }}">
-                    <h2 class="twig--green">
-                        {{ $special->name }}
-                    </h2>
+                    <?
+                    $i = 0;
+                    ?>
+                    @foreach ($specials as $special)
+                    <?
+                    ++$i;
+                    $lines = explode("\n", $special->special_description);
+                    ?>
+                    <div class="house-plan" @if($i > 1) style="display: none;" @endif data-plan="{{ $i }}">
+                        <h2 class="twig--green">
+                            {{ $special->name }}
+                        </h2>
 
-                    <div class="house-pict">
-                        <img src="{{ $special->special_photo->full() }}" alt="">
-                    </div><!--
+                        <div class="house-pict">
+                            <img src="{{ $special->special_photo->full() }}" alt="">
+                        </div><!--
 
-					 --><div class="house-plan-top">
-                        <img src="{{ $special->special_plan->full() }}" alt="">
+    					 --><div class="house-plan-top">
+                            <img src="{{ $special->special_plan->full() }}" alt="">
+                        </div>
+
+                        @if (count($lines))
+                        <ul class="house-props">
+                            <!--
+                            @foreach ($lines as $line)
+                                --><li class="house-props-item">
+                                    {{ $line }}
+                                </li><!--
+                            @endforeach
+                            -->
+                        </ul>
+                        @endif
                     </div>
+                    @endforeach
 
-                    @if (count($lines))
-                    <ul class="house-props">
-                        <!--
-                        @foreach ($lines as $line)
-                            --><li class="house-props-item">
-                                {{ $line }}
-                            </li><!--
-                        @endforeach
-                        -->
-                    </ul>
-                    @endif
+
                 </div>
-                @endforeach
+                <ul class="houses-list">
 
+                    <!--
+                    <?
+                    $i = 0;
+                    ?>
+                    @foreach ($specials as $special)
+                    <?
+                    ++$i;
+                    ?>
+                        --><li class="houses-item @if($i == 1) active @endif" data-plan="{{ $i }}">
+                            <div class="houses-item-cover" style="background-image: url({{ $special->special_photo->full() }})">
+                            </div>
+                            <div class="houses-item-desc">
+    							<span>
+    								{{ $special->name }}
+    							</span>
+                            </div>
+                        </li><!--
+                    @endforeach
+                    -->
 
+                </ul>
+                <div class="icon icon-arrow_left js-prev-house"></div>
+                <div class="icon icon-arrow_right js-next-house"></div>
             </div>
-            <ul class="houses-list">
-
-                <!--
-                <?
-                $i = 0;
-                ?>
-                @foreach ($specials as $special)
-                <?
-                ++$i;
-                ?>
-                    --><li class="houses-item @if($i == 1) active @endif" data-plan="{{ $i }}">
-                        <div class="houses-item-cover" style="background-image: url({{ $special->special_photo->full() }})">
-                        </div>
-                        <div class="houses-item-desc">
-							<span>
-								{{ $special->name }}
-							</span>
-                        </div>
-                    </li><!--
-                @endforeach
-                -->
-
-            </ul>
         </section>
         <!-- End of house project section -->
         @endif
