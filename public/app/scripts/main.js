@@ -28,6 +28,7 @@ var App = (function(){
 	//fancybox init
 	$(function(){
 		$('.fancybox').fancybox({
+			type: "iframe",
 			helpers: {
 				overlay: {
 					locked: false
