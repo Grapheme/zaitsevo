@@ -3,10 +3,10 @@
  * TEMPLATE_IS_NOT_SETTABLE
  */
 ?>
-<header class="main-header" data-start="box-shadow: 6px 0px 0px 0 rgba(0, 0, 0, 0); height: 9.6875rem;" data-150-start="box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3); background-position: 0 0; height: 6rem;" data-_map--10p="background-position: 0 0%;" data-_map-10p="background-position: 0 200%; box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);" data-_mapend--10p="background-position: 0 200%;" data-_mapend-49p="background-position: 0 200%;" data-_mapend-50p="background-position: 0 0%; box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3);">
+<header class="main-header" data-start="box-shadow: 6px 0px 0px 0 rgba(0, 0, 0, 0); height: 9.6875rem;" data-150-start="box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3); background-position: 0 0; height: 6rem;" data-_map--10p="background-position: 0 0%;" data-_map-10p="background-position: 0 200%; box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);" data-_mapend--10p="background-position: 0 200%;" data-_mapend-1p="background-position: 0 200%;" data-_mapend-2p="background-position: 0 0%; box-shadow: 6px 1px 4px 0 rgba(0, 0, 0, 0.3);">
 
     <div class="contacts">
-        <div class="phone">
+        <div class="phone" data-start="margin-top: -1em" data-150-start="margin-top: -0.4em">
 
             {{ $page->block('phones') }}
 

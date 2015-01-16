@@ -5,19 +5,19 @@
 ?>
 <footer class="main-footer" data-_map--100p="background-position: 0 0%;" data-_map-10p="background-position: 0 -200%" data-_mapend-50p="background-position: 0 0%;">
             <div class="footer-houses" data-_map--100p="transform: translate(0, 0%) scale(1); background-size: auto 100%; background-repeat: no-repeat;" data-_map--50p="transform: translate(0, 120%) scale(1)" data-_mapend-50p="transform: translate(0, 0%) scale(1);">
-                <div class="block-1 mil" data-_about--15p="opacity: 0;" data-_about--10p="opacity: 1;"></div>
-                <div class="block-1 mil-tree" data-_about--15p="opacity: 0;" data-_about--10p="opacity: 1;"></div>
-                <div class="block-1 right-tree-big" data-_about--25p="opacity: 0;" data-_about--20p="opacity: 1;"></div>
-                <div class="block-1 mil-tree-group" data-_about--35p="opacity: 0;" data-_about--30p="opacity: 1;"></div>
-                <div class="block-1 right-tree-small" data-_about--45p="opacity: 0;" data-_about--40p="opacity: 1;"></div>
-                <div class="block-2 school" data-_areas--25p="opacity: 0;" data-_areas--20p="opacity: 1;"></div>
-                <div class="block-2 near-school" data-_objects--45p="opacity: 0;" data-_objects--40p="opacity: 1;"></div>
-                <div class="block-2 store" data-_objects--25p="opacity: 0;" data-_objects--20p="opacity: 1;" ></div>
-                <div class="block-2 right-big" data-_areas--35p="opacity: 0;" data-_areas--30p="opacity: 1;"></div>
-                <div class="block-2 right-small" data-_areas--45p="opacity: 0;" data-_areas--40p="opacity: 1;"></div>
-                <div class="block-3 center-home" data-_houses--40p="opacity: 0;" data-_houses--30p="opacity: 1;"></div>
-                <div class="block-3 horse" data-_houses--25p="opacity: 0;" data-_houses--20p="opacity: 1;"></div>
-                <div class="block-3 little-horse" data-_houses--15p="opacity: 0;" data-_houses--10p="opacity: 1;"></div>
+                <div class="block-1 mil" data-_about--15p="opacity: 0;" data-_about--1p="opacity: 1;"></div>
+                <div class="block-1 mil-tree" data-_about--15p="opacity: 0;" data-_about--1p="opacity: 1;"></div>
+                <div class="block-1 right-tree-big" data-_about--25p="opacity: 0;" data-_about--11p="opacity: 1;"></div>
+                <div class="block-1 mil-tree-group" data-_about--35p="opacity: 0;" data-_about--21p="opacity: 1;"></div>
+                <div class="block-1 right-tree-small" data-_about--45p="opacity: 0;" data-_about--31p="opacity: 1;"></div>
+                <div class="block-2 school" data-_areas--25p="opacity: 0;" data-_areas--11p="opacity: 1;"></div>
+                <div class="block-2 near-school" data-_objects--45p="opacity: 0;" data-_objects--31p="opacity: 1;"></div>
+                <div class="block-2 store" data-_objects--25p="opacity: 0;" data-_objects--11p="opacity: 1;" ></div>
+                <div class="block-2 right-big" data-_areas--35p="opacity: 0;" data-_areas--21p="opacity: 1;"></div>
+                <div class="block-2 right-small" data-_areas--45p="opacity: 0;" data-_areas--31p="opacity: 1;"></div>
+                <div class="block-3 center-home" data-_houses--40p="opacity: 0;" data-_houses--21p="opacity: 1;"></div>
+                <div class="block-3 horse" data-_houses--25p="opacity: 0;" data-_houses--11p="opacity: 1;"></div>
+                <div class="block-3 little-horse" data-_houses--15p="opacity: 0;" data-_houses--1p="opacity: 1;"></div>
             </div>
             <div class="footer-cont" data-_map--100p="background-position: 0 0%; background-repeat: repeat-x" data-_map-10p="background-position: 0 -400%; background-repeat: no-repeat" data-_mapend-20p="background-position: 0 0%; background-repeat: repeat">
 
@@ -93,7 +93,7 @@
                             <input type="checkbox" id="check-2" name="nomination[landscape]" value="1" class="checkbox"><label for="check-2" class="checkbox-label">Ландшафтная архитектура</label>
                         </div>
 
-                        <input class="input" type="text" name="projname" placeholder="Название проекта *">
+                       <!--  <input class="input" type="text" name="projname" placeholder="Название проекта *"> -->
                     </fieldset>
 
                     <fieldset>
@@ -110,27 +110,6 @@
 								 --><input type="text" name="site" placeholder="Веб-сайт">
                         </div>
                     </fieldset>
-                </div>
-
-                <div class="column column-half">
-
-                    <fieldset>
-
-                        <h3>Руководитель проекта</h3>
-
-                        <input class="input" type="text" name="rname" placeholder="ФИО*">
-
-                        <input class="input" type="text" name="rplace" placeholder="Должность">
-
-                        <div class="input-group-2 clearfix">
-
-                            <input type="text" name="remail" placeholder="Email *">
-
-                            <input type="text" name="rphone" placeholder="Телефон *">
-                        </div>
-
-                        <textarea name="aboutpeople" placeholder="Расскажите о коллективе"></textarea>
-                    </fieldset>
 
                     <fieldset class="file-inputs">
 
@@ -146,6 +125,89 @@
                         </p>
 
                     </fieldset>
+                </div>
+
+                <div class="column column-half">
+
+                    <fieldset>
+
+                        <h3>Критерии оценки</h3>
+
+                        <ul class="mark-criteries">
+
+                            <li class="mark-criteria">
+                                <div class="mark-criteria-head">
+                                    Технико­экономический
+                                </div>
+                                <div class="mark-criteria-body">
+                                    Решение должно быть пространство­эффективным и иметь
+                                    потенциал для реализации.
+                                </div>
+                            </li>
+
+                            <li class="mark-criteria">
+                                <div class="mark-criteria-head">
+                                    Визуальная привлекательность
+                                </div>
+                                <div class="mark-criteria-body">
+                                    Решение должно быть визуально привлекательным и легкоадаптироваться в окружающей среде.
+                                </div>
+                            </li>
+
+                            <li class="mark-criteria">
+                                <div class="mark-criteria-head">
+                                    Экономическая эффективность
+                                </div>
+                                <div class="mark-criteria-body">
+
+                                </div>
+                            </li>
+
+                            <li class="mark-criteria">
+                                <div class="mark-criteria-head">
+                                    Инновационность
+                                </div>
+                                <div class="mark-criteria-body">
+                                    Решение должно быть оригинальным и свежим.
+                                </div>
+                            </li>
+
+                            <li class="mark-criteria">
+                                <div class="mark-criteria-head">
+                                    Долголетие
+                                </div>
+                                <div class="mark-criteria-body">
+                                    Решение должно быть пригодным для долгосрочного использования и иметь
+                                    возможность для обновления в свете технологических изменений.
+                                </div>
+                            </li>
+
+                            <li class="mark-criteria">
+                                <div class="mark-criteria-head">
+                                    Гибкость
+                                </div>
+                                <div class="mark-criteria-body">
+                                    Решение должно иметь возможность повторения.
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3>Сроки</h3>
+
+                        <div class="deadline">
+                            <div>
+                                <strong>Последний срок подачи работ:</strong> 1 марта 2015 г.
+                            </div>
+                            <div>
+                                <strong>Объявление победителей:</strong> апрель 2015 г.
+                            </div>
+                            <div>
+                                <strong>Язык конкурса:</strong> русский.
+                            </div>
+                        </div>
+                        
+                    </fieldset>
+
                 </div>
             </div>
 

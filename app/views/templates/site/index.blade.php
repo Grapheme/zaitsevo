@@ -30,7 +30,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
     <div class="main-wrapper">
         <!-- Main section -->
-        <section class="section section-main" style="height:700px !important;">
+        <section class="section section-main">
 
             <h1>
                 {{ $page->block('h1') }}
@@ -97,18 +97,24 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
         <!-- Getto section -->
         <section class="section section-getto section-short">
-            <h2 data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">
+            <h2>
 
                 {{ $page->block('slogan1') }}
 
             </h2>
-            <a href="#" class="btn btn--blue btn--decorated js-btn-order" data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">Заказать звонок</a>
+            <div class="tile-of-light" data-75p-top="left: -110%; transform: skew(-20deg, 0);" data-25p-top="left: 0; transform: skew(0, 0);"></div>
+            <a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
         </section>
         <!-- End of getto section -->
 
         @if (count($objects))
         <!-- Objects section -->
         <section id="infrastructure" class="section section-objects">
+            <div class="section-h2-cont">
+                <h2 class="section-h2">
+                    Инфраструктура
+                </h2>
+            </div>
 
             <div class="section-cont">
                 <div class="objects-list">
@@ -179,6 +185,11 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
         <!-- Areas section -->
         <section id="areas" class="section section-areas">
+            <div class="section-h2-cont">
+                <h2 class="section-h2">
+                    Участки
+                </h2>
+            </div>
 
             <div class="section-cont">
 
@@ -199,12 +210,12 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
         <!-- Getto section -->
         <section class="section section-no-troubles section-short">
-            <h2 data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">
+            <h2>
 
                 {{ $page->block('slogan2') }}
 
             </h2>
-            <a href="#" class="btn btn--blue btn--decorated js-btn-order" data-75p-top="transform: translate(0, 50%) scale(0.8)" data-55p-top="transform: translate(0,0) scale(1)">Заказать звонок</a>
+            <a href="#" class="btn btn--blue btn--decorated js-btn-order">Заказать звонок</a>
         </section>
         <!-- End of getto section -->
 
@@ -212,68 +223,79 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
         <!-- House project section -->
         <section id="spec-offering" class="section section-houses-proj">
 
-            <div class="section-cont">
-
-                <?
-                $i = 0;
-                ?>
-                @foreach ($specials as $special)
-                <?
-                ++$i;
-                $lines = explode("\n", $special->special_description);
-                ?>
-                <div class="house-plan" @if($i > 1) style="display: none;" @endif data-plan="{{ $i }}">
-                    <h2 class="twig--green">
-                        {{ $special->name }}
-                    </h2>
-
-                    <div class="house-pict">
-                        <img src="{{ $special->special_photo->full() }}" alt="">
-                    </div><!--
-
-					 --><div class="house-plan-top">
-                        <img src="{{ $special->special_plan->full() }}" alt="">
-                    </div>
-
-                    @if (count($lines))
-                    <ul class="house-props">
-                        <!--
-                        @foreach ($lines as $line)
-                            --><li class="house-props-item">
-                                {{ $line }}
-                            </li><!--
-                        @endforeach
-                        -->
-                    </ul>
-                    @endif
-                </div>
-                @endforeach
-
-
+            <div class="section-h2-cont">
+                <h2 class="section-h2">
+                    Спецпредложения
+                    <b>Строительство под чистовую отделку</b>
+                </h2>
             </div>
-            <ul class="houses-list">
 
-                <!--
-                <?
-                $i = 0;
-                ?>
-                @foreach ($specials as $special)
-                <?
-                ++$i;
-                ?>
-                    --><li class="houses-item @if($i == 1) active @endif" data-plan="{{ $i }}">
-                        <div class="houses-item-cover" style="background-image: url({{ $special->special_photo->full() }})">
-                        </div>
-                        <div class="houses-item-desc">
-							<span>
-								{{ $special->name }}
-							</span>
-                        </div>
-                    </li><!--
-                @endforeach
-                -->
+            <div class="section-houses-wrap">
+                <div class="section-cont">
 
-            </ul>
+                    <?
+                    $i = 0;
+                    ?>
+                    @foreach ($specials as $special)
+                    <?
+                    ++$i;
+                    $lines = explode("\n", $special->special_description);
+                    ?>
+                    <div class="house-plan" @if($i > 1) style="display: none;" @endif data-plan="{{ $i }}">
+                        <h2 class="twig--green">
+                            {{ $special->name }}
+                        </h2>
+
+                        <div class="house-pict">
+                            <img src="{{ $special->special_photo->full() }}" alt="">
+                        </div><!--
+
+    					 --><div class="house-plan-top">
+                            <img src="{{ $special->special_plan->full() }}" alt="">
+                        </div>
+
+                        @if (count($lines))
+                        <ul class="house-props">
+                            <!--
+                            @foreach ($lines as $line)
+                                --><li class="house-props-item">
+                                    {{ $line }}
+                                </li><!--
+                            @endforeach
+                            -->
+                        </ul>
+                        @endif
+                    </div>
+                    @endforeach
+
+
+                </div>
+                <ul class="houses-list">
+
+                    <!--
+                    <?
+                    $i = 0;
+                    ?>
+                    @foreach ($specials as $special)
+                    <?
+                    ++$i;
+                    ?>
+                        --><li class="houses-item @if($i == 1) active @endif" data-plan="{{ $i }}">
+                            <div class="houses-item-cover" style="background-image: url({{ $special->special_photo->full() }})">
+                            </div>
+                            <div class="houses-item-desc">
+    							<span>
+    								{{ $special->name }}
+    							</span>
+                            </div>
+                        </li><!--
+                    @endforeach
+                    -->
+
+                </ul>
+                <div class="icon icon-arrow_left js-prev-house"></div>
+                <div class="icon icon-arrow_right js-next-house"></div>
+            </div>
         </section>
         <!-- End of house project section -->
         @endif
@@ -353,6 +375,24 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 {{ $page->block('slogan3') }}
 
             </h3>
+
+            <div class="contact-info-cont">
+                <div class="contact-info clearfix">
+                    <div class="phones">
+                        <h4>
+                            Отдел продаж:
+                        </h4>
+                        <a href="tel:+79525776877">+7 (952) 577-68-77</a>,
+                        <a href="tel:+78632963224">+7 (863) 296-32-24</a>
+                    </div>
+                    <div class="address">
+                        <h4>
+                            Адрес:
+                        </h4>
+                        344029 г. Аксай, ул. Садовая, 8а
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- End of footer form section-->
 
@@ -365,6 +405,16 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
     @if (count($objects))
     <script>
+        //facebook resize
+        $(window).bind("load resize", function(){
+          var container_height = $('.section-form-half.feedback').height() - $('.section-form-half.callback').height() - 31;   
+          var container_width = $('#fbcontainer').width();
+            $('#fbcontainer').html('<div class="fb-like-box" data-href="https://www.facebook.com/zaitsevo"' +
+              'data-width="' + container_width + '" data-height="' + container_height + '" data-colorscheme="light"' + 
+              'data-show-faces="true"' +
+              'data-header="false" data-stream="false" data-show-border="true"></div>');
+              FB.XFBML.parse( );                  
+            });
         //tooltips init
         $(function(){
 
@@ -384,6 +434,9 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                     </div>')
             });
             @endforeach
+            $(window).scroll( function(){
+                $('.map-mark').tooltipster('hide');
+            }); 
 
         });
     </script>

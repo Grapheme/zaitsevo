@@ -2,9 +2,10 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 
 	width: 100%;
+	min-width: 1200rem / $hfs;
 	height: 155rem / $hfs;
 
 	padding: 38rem / $hfs 65rem / $hfs 38rem / $hfs;
@@ -60,18 +61,10 @@
 			display: block;
 			color: $clr-black-green;
 			text-decoration: none;
-
-			&:last-child {
-				display: inline-block;
-				font-size: .8em;
-
-				b {
-					font-weight: 400;
-				}
-			}
 		}
 
 		.phones-delim {
+			display: none;
 			font-size: .7em;
 		}
 	}

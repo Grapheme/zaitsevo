@@ -5,11 +5,12 @@
 	z-index: 3;
 
 	width: 100%;
+	min-width: 1200rem / $hfs;
 	height: 120rem / $hfs;
 
 	padding: 0 65rem / $hfs;
 
-	font: 1.05em 'osnova_pro', sans-serif;
+	font: 1em 'osnova_pro', sans-serif;
 
 	background: url(../images/footer.png) repeat-x 0 top;
 

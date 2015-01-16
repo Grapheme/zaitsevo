@@ -1,7 +1,83 @@
 .section-houses-proj {
 	position: relative;
-	padding: 7.5rem 0 0;
 	background: url(../images/texture.jpg);
+
+	.section-h2-cont {
+		text-align: center;
+	}
+
+	.section-houses-wrap {
+		position: relative;
+		margin: 0 auto;
+    	max-width: 71.25rem;
+
+		.icon {
+			transition: all .4s ease;
+			cursor: pointer;
+
+			&:hover {
+				color: $clr-green;
+			}
+
+			&.icon-arrow_left {
+				position: absolute;
+				top: 38%;
+				left: -6rem;
+				font-size: 6rem;
+			}
+			&.icon-arrow_right {
+				position: absolute;
+				top: 38%;
+				right: -6rem;
+				font-size: 6rem;
+			}
+		}
+	}
+
+	.section-h2 {
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		font-family: 'room';
+		font-size: 46em / $hfs;
+		line-height: 241rem / $hfs;
+
+		b {
+			position: absolute;
+			top: 65rem / $hfs;
+			left: 0;
+
+			width: 100%;
+			height: 1rem;
+
+			font-size: 1rem;
+			font-weight: 400;
+			font-family: "osnova_pro",sans-serif;
+			text-align: center;
+		}
+
+		&:before {
+		    color: #a78038;
+		    content: "•";
+		    left: -2rem;
+		    position: absolute;
+		    top: 0;
+		    line-height: 241rem / $hfs;
+		    font-size: .6em;
+		    transition: all 0.6s ease 0s;
+		}
+		&:after {
+		    color: #a78038;
+		    content: "•";
+		    position: absolute;
+		    right: -2rem;
+		    top: 0;
+		    line-height: 241rem / $hfs;
+		    font-size: .6em;
+		    transition: all 0.6s ease 0s;
+		}
+	}
 
 	.section-cont {
 		max-width: 1140rem / $hfs;
@@ -51,7 +127,7 @@
 		margin: 0 0 14rem / $hfs;
 		padding: 0 60rem / $hfs 0 1em;
 
-		font-size: 1.05em;
+		font-size: 1em;
 		line-height: 24em / 15em * 1em;
 
 		&:after {
@@ -100,7 +176,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
+			width: 101%;
 			height: 100%;
 
 			background-repeat: no-repeat;
