@@ -86,7 +86,7 @@ class PublicPagesController extends BaseController {
                 ));
 
                 ## Main page for non-default locale
-                if (!$default_locale_mainpage)
+                if (!Config::get('pages.disable_mainpage_route') && !$default_locale_mainpage)
                     Route::any('/', array(
                         'as' => 'mainpage',
                         'before' => 'i18n_url',
@@ -96,7 +96,7 @@ class PublicPagesController extends BaseController {
             });
 
             ## Main page for default locale
-            if ($default_locale_mainpage)
+            if (!Config::get('pages.disable_mainpage_route') && $default_locale_mainpage)
                 Route::any('/', array(
                     'as' => 'mainpage',
                     'before' => '',
@@ -115,10 +115,13 @@ class PublicPagesController extends BaseController {
                 ));
 
                 ## Main page
-                Route::any('/', array(
-                    'as' => 'mainpage',
-                    'uses' => $class.'@showPage'
-                ));
+                if (!Config::get('pages.disable_mainpage_route')) {
+
+                    Route::any('/', array(
+                        'as' => 'mainpage',
+                        'uses' => $class.'@showPage'
+                    ));
+                }
             });
 
         }
@@ -164,8 +167,11 @@ class PublicPagesController extends BaseController {
     ## Функция для просмотра мультиязычной страницы
     public function showPage($url = false){
 
-        if (!$this->page->count())
-            return View::make(Config::get('app.welcome_page_tpl'));
+        if (!$this->page->count()) {
+
+            #return View::make(Config::get('app.welcome_page_tpl'));
+            App::abort(404);
+        }
 
         if (!$url)
             $url = Input::get('url');
