@@ -226,6 +226,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
             <div class="section-h2-cont">
                 <h2 class="section-h2">
                     Спецпредложения
+                    <b>Строительство под чистовую отделку</b>
                 </h2>
             </div>
 
