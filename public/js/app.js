@@ -53,7 +53,6 @@ $(function(){
                 email: true
             },
             phone: 'required',
-            site: 'required',
             rname: 'required',
             remail: {
                 required: true,
@@ -69,7 +68,6 @@ $(function(){
                 email: 'Неверный формат'
             },
             phone: 'Обязательное поле',
-            site: 'Обязательное поле',
             rname: 'Обязательное поле',
             remail: {
                 required: 'Обязательное поле',
