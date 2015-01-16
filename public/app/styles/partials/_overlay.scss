@@ -213,4 +213,39 @@
 		}
 	}
 
+	.deadline {
+		font-size: 15em / $hfs;
+		line-height: 20em / 14;
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.mark-criteries {
+		@extend .list-unstyled;
+		margin: 0 0 36rem / $hfs;
+
+		font-size: 15em / $hfs;
+		line-height: 20em / 14;
+
+		.mark-criteria {
+			margin: 0 0 18rem / $hfs;
+			list-style-position: inside;
+			list-style-type: disc;
+			color: $clr-light-brown;
+		}
+
+		.mark-criteria-head {
+
+			display: inline-block;
+			font-weight: 600;
+			color: #242424;
+		}
+		
+		.mark-criteria-body {
+
+			color: #242424;
+		}
+	}
 }
