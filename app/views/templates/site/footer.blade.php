@@ -102,7 +102,7 @@
 
                         <input class="input" type="text" name="zname" placeholder="ФИО заявителя">
 
-                        <textarea name="address" placeholder="Адрес *"></textarea>
+                        <textarea name="address" placeholder="Рассказ о своем проекте *"></textarea>
 
                         <div class="inv-person-data clearfix">
                             <input type="text" name="email" placeholder="Email *"><!--
