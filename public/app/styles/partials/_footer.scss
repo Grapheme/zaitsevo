@@ -62,6 +62,7 @@
 			animation: play 1.8s steps(59) infinite;
 
 			background-size: auto 100%;
+			z-index: 2;
 		}
 
 		.mil-tree {
@@ -74,12 +75,9 @@
 		.right-tree-big {
 			top: 35%;
 			right: 0%;
-			background-image: url(../images/bigtreesprite.png);
-			width: 120px;
-			height: 100px;
-
-			animation: play 11.8s steps(219) infinite;
-			background-size: auto;
+			background-image: url(../images/footer-objects/1/right-tree-big.png);
+			width: 82rem / $hfs;
+			height: 74rem / $hfs;
 		}
 		.mil-tree-group {
 			top: 15%;
