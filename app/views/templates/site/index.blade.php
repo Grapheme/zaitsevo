@@ -376,7 +376,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
             </h3>
 
-            <div class="contact-info-cont">
+            <div id="contacts-block" class="contact-info-cont">
                 <div class="contact-info clearfix">
                     <div class="phones">
                         <h4>
