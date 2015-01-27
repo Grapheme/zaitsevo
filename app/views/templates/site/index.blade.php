@@ -61,7 +61,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 <div class="btn-scroll-cont" data-75p-top="transform: translate(0, 100%)" data-50p-top="transform: translate(0,0); opacity: 1;" data-35p-top="opacity: 0; transform: translate(0, -50%)">
                     <div class="btn btn--small btn--scroll btn--decorated">
                         <div class="btn--scroll-dec"></div>
-                        Участки
+                        Карта
                     </div>
                 </div>
             </div>
