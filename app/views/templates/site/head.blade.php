@@ -11,6 +11,7 @@
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <link rel="icon" type="image/png" href="{{ Config::get('site.theme_path') }}/favicon.png">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
