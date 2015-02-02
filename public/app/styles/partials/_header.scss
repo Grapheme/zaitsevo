@@ -71,11 +71,21 @@
 }
 
 nav {
+	transition: all .4s ease;
 	position: absolute;
 	top: 50%;
 	right: 56rem / $hfs;
 
-	margin-top: -23.5em / $hfs
+	margin-top: -23.5em / $hfs;
+
+	@media screen and (max-width: 1300px) {
+		right: 1.5rem;
+	}
+
+	@media screen and (max-width: 1220px) {
+		right: 3rem;
+		top: 36%;
+	}
 }
 
 .nav-list {
@@ -84,6 +94,15 @@ nav {
 	.nav-list-item {
 		float: left;
 		line-height: 47em / $hfs;
+
+		@media screen and (max-width: 1220px) {
+			height: 2.1rem;
+			line-height: normal;
+
+			&:nth-child(4) {
+				clear: left;
+			}
+		}
 
 		a {
 			transition: all .4s ease;
@@ -97,6 +116,11 @@ nav {
 
 			color: $clr-dark-green;
 			text-decoration: none;
+
+
+			@media screen and (max-width: 1569px) {
+				margin: 0 0 0 1.2rem;
+			}
 
 			&:after {
 				transition: all .4s ease;

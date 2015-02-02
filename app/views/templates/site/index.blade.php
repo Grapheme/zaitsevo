@@ -61,7 +61,7 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
                 <div class="btn-scroll-cont" data-75p-top="transform: translate(0, 100%)" data-50p-top="transform: translate(0,0); opacity: 1;" data-35p-top="opacity: 0; transform: translate(0, -50%)">
                     <div class="btn btn--small btn--scroll btn--decorated">
                         <div class="btn--scroll-dec"></div>
-                        Участки
+                        Карта
                     </div>
                 </div>
             </div>
@@ -376,14 +376,15 @@ $specials = DicLib::loadImages($specials, ['special_photo', 'special_plan']);
 
             </h3>
 
-            <div class="contact-info-cont">
+            <div id="contacts-block" class="contact-info-cont">
                 <div class="contact-info clearfix">
                     <div class="phones">
                         <h4>
                             Отдел продаж:
                         </h4>
-                        <a href="tel:+79525776877">+7 (952) 577-68-77</a>,
-                        <a href="tel:+78632963224">+7 (863) 296-32-24</a>
+                        <a href="tel:+78633113906">+7 (863) 311-39-06</a>,
+                        <a href="tel:+78632963224">+7 (863) 296-32-24</a>,<br>
+                        <a href="tel:+78635776877">+7 (952) 577-68-77</a>
                     </div>
                     <div class="address">
                         <h4>

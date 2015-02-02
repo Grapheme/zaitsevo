@@ -1,3 +1,7 @@
+@keyframes play {
+   from { background-position:    0%; }
+     to { background-position: 100%; }
+}
 .main-footer {
 	position: fixed;
 	bottom: 0;
@@ -51,10 +55,16 @@
 			top: 25%;
 			left: -10%;
 
-			background-image: url(../images/footer-objects/1/mil.png);
-			width: 51rem / $hfs;
-			height: 76rem / $hfs;
+			background-image: url(../images/milsprite.png);
+			width: 75px;
+			height: 90px;
+
+			animation: play 1.8s steps(59) infinite;
+
+			background-size: auto 100%;
+			z-index: 2;
 		}
+
 		.mil-tree {
 			top: 56%;
 			left: -4%;
@@ -136,11 +146,15 @@
 			height: 42rem / $hfs;
 		}
 		.little-horse {
-			top: 75%;
-			right: 5%;
-			background-image: url(../images/footer-objects/3/little-horse.png);
-			width: 31rem / $hfs;
-			height: 18rem / $hfs;
+			top: -13%;
+			right: 55%;
+			background-image: url(../images/smokesprite.png);
+			width: 70px;
+			height: 70px;
+
+			background-size: auto;
+
+			animation: play 11.8s steps(119) infinite;
 		}
 	}
 

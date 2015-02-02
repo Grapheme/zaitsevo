@@ -102,7 +102,7 @@
 
                         <input class="input" type="text" name="zname" placeholder="ФИО заявителя">
 
-                        <textarea name="address" placeholder="Адрес *"></textarea>
+                        <textarea name="address" placeholder="Рассказ о своем проекте *"></textarea>
 
                         <div class="inv-person-data clearfix">
                             <input type="text" name="email" placeholder="Email *"><!--
@@ -196,10 +196,10 @@
 
                         <div class="deadline">
                             <div>
-                                <strong>Последний срок подачи работ:</strong> 1 марта 2015 г.
+                                <strong>Последний срок подачи работ:</strong> 1 августа 2015 года.
                             </div>
                             <div>
-                                <strong>Объявление победителей:</strong> апрель 2015 г.
+                                <strong>Объявление победителей:</strong> 15 сентября 2015 года.
                             </div>
                             <div>
                                 <strong>Язык конкурса:</strong> русский.
